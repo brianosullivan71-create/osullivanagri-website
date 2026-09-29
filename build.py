@@ -294,7 +294,10 @@ PAGES["crop-protection.html"] = ("Crop Protection | O'Sullivan Agri", page_hero(
   {checks(["Herbicides for cereals, beans, rape and grassland",
            "Fungicides and spray programmes for cereals",
            "Insecticides",
-           "<span class=todo>[growth regulators, slug pellets, adjuvants, others?]</span>"], "on-light")}</div>
+           "Growth regulators",
+           "Slug pellets",
+           "Adjuvants",
+           "And many more plant protection products"], "on-light")}</div>
   <div class="card stack"><h3>Buying professional products</h3>
   <p class="muted">Professional plant protection products can only be sold to registered professional users. Have your DAFM professional user number to hand when you buy.</p>
   <p class="muted">All products are sold sealed in their original containers.</p></div>
