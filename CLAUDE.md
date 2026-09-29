@@ -30,9 +30,9 @@ Yellow `.todo` boxes mark facts not yet confirmed by Brian. Never invent busines
 - Phone 053 938 3304 · Email osagriacc@gmail.com · Facebook facebook.com/osullivan.agri.9
 - Hours: Mon–Fri 9am–6pm, Sat 9am–1pm, closed Sundays and bank holidays. Harvest hours vary (don't list them).
 - Fertiliser: broad range incl. many own custom blends. Do NOT mention delivery.
-- Seed: cereals, beans, oilseed rape, fodder rape, grass seed (4–5 mixes from Germinal and "DNF" — assumed DLF, to confirm).
+- Seed: cereals (wheat, barley, oats), beans, rape, forage crops, grass seed. Do NOT name seed companies (no Germinal/DLF) or varieties; forage crops listed as a title only; grass seed = "some of the best mixes".
 - Feed: own mill; house rations (see feed page); straights barley, beans, oats, maize, soya bean meal, soya hulls.
-- Agri Choice is their buying group's own brand — highlight it (group name still to confirm).
+- Agri Choice is their buying group's own brand — highlight it. Do NOT name the buying group.
 - Grain intake at harvest: barley, wheat, oats, beans.
 - Local customer base: write for local farmers, plain language.
 - Founded 1985 by Michael O'Sullivan (Brian's father) in Camolin; family business.
@@ -40,7 +40,7 @@ Yellow `.todo` boxes mark facts not yet confirmed by Brian. Never invent busines
 - Very extensive veterinary range; licensed merchant; linked in with VetPal for in-store vet prescriptions.
 - The bulk bags photo (bulk-bags-lime.jpg) is HYDRATED LIME, not fertiliser — it belongs with animal health / hygiene.
 - Sells AdBlue.
-- Agri Choice range: mineral bags, mineral buckets, cubicle lime, silage wrap (more to confirm). Message: high quality products at the best prices. Has its own page (agri-choice.html).
+- Agri Choice range: mineral bags, mineral buckets, cubicle lime, silage wrap (multi-layer bale wrap), silage covers. No "more in the range" box. Message: high quality products at the best prices. Has its own page (agri-choice.html).
 - Photos come from the O' Sullivan Agri Facebook business page (facebook.com/profile.php?id=100088371622847),
   cleaned with tools/clean_photos.py (glare, colour cast, shadows, sharpen, 1600px).
 - FEED IS NEVER PRE-MIXED: all feed is sold as straights; house rations are recipes, not a mixed product.

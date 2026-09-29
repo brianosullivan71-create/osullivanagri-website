@@ -128,7 +128,7 @@ TILES = [
  ("advice.html", "advice", "Agronomy advice", "Crop walks, spray programmes and fertiliser plans from qualified agronomists."),
  ("fertiliser.html", "fert", "Fertiliser", "A broad range, including many of our own custom blends."),
  ("crop-protection.html", "spray", "Crop protection", "Herbicides, fungicides and insecticides from a DAFM-registered store."),
- ("seed.html", "seed", "Seed", "Cereals, beans, rape and grass seed from Germinal and DLF."),
+ ("seed.html", "seed", "Seed", "Cereals, beans, rape, forage crops and grass seed."),
  ("feed.html", "feed", "Feed & minerals", "Straights ground in our own mill, house ration recipes and Agri Choice minerals."),
  ("animal-health.html", "health", "Animal health", "A full veterinary range, with prescriptions sorted in store through VetPal."),
  ("hardware.html", "hardware", "Agri hardware", "The yard and farm essentials you'd otherwise drive for."),
@@ -214,10 +214,10 @@ PAGES["index.html"] = ("O'Sullivan Agri | Farm supplies & advice, Camolin", f'''
 
 <section class="band band-straw"><div class="wrap split" style="align-items:center">
   <div class="stack"><p class="eyebrow">Our group's own brand</p><div class="ac-logo"><img src="assets/agri-choice-logo.png" width="1400" height="401" alt="Agri Choice"></div>
-  <p style="font-size:1.14rem">Agri Choice is the own brand of our buying group <span class="todo">[group name]</span>. High quality products, bought together at the best prices.</p></div>
+  <p style="font-size:1.14rem">Agri Choice is our buying group's own brand: high quality products, bought together at the best prices.</p></div>
   <div class="card stack" style="background:var(--surface)"><h4>Agri Choice in our yard</h4>
   <ul style="margin:10px 0 0;padding-left:1.2em;line-height:1.9">
-  <li>Mineral bags and mineral buckets</li><li>Cubicle lime: Hydrated Blend, Super P and standard</li><li>Silage wrap</li></ul>
+  <li>Mineral bags and mineral buckets</li><li>Cubicle lime: Hydrated Blend, Super P and standard</li><li>Silage wrap and silage covers</li></ul>
   <div><a class="btn btn-green" href="agri-choice.html">See the Agri Choice range</a></div></div>
 </div></section>
 
@@ -311,24 +311,19 @@ PAGES["crop-protection.html"] = ("Crop Protection | O'Sullivan Agri", page_hero(
 
 PAGES["seed.html"] = ("Seed | O'Sullivan Agri", page_hero("Seed",
   "Seed for tillage, forage and grass",
-  "Cereals, beans, oilseed rape, fodder rape and grass seed, with a range of grass mixes from Germinal and DLF.") + f'''
+  "Cereals, beans, rape, forage crops and grass seed, with some of the best grass seed mixes on the market.") + f'''
 <section class="band"><div class="wrap">
   <div class="head"><p class="eyebrow">Agri seeds</p><h2>What we stock</h2></div>
   <div class="grid-3">
-    <div class="card stack"><h3>Cereals</h3><div class="chips"><span>Wheat</span><span>Barley</span><span>Oats</span></div><p class="muted"><span class="todo">[winter / spring varieties you carry?]</span></p></div>
-    <div class="card stack"><h3>Beans & rape</h3><div class="chips"><span>Beans</span><span>Oilseed rape</span></div><p class="muted"><span class="todo">[varieties?]</span></p></div>
-    <div class="card stack"><h3>Forage crops</h3><div class="chips"><span>Fodder rape</span></div><p class="muted"><span class="todo">[kale, stubble turnips, others?]</span></p></div>
+    <div class="card stack"><h3>Cereals</h3><div class="chips"><span>Wheat</span><span>Barley</span><span>Oats</span></div></div>
+    <div class="card stack"><h3>Beans & rape</h3><div class="chips"><span>Beans</span><span>Rape</span></div></div>
+    <div class="card stack"><h3>Forage crops</h3></div>
   </div>
 </div></section>
 <section class="band band-white"><div class="wrap split">
-  <div class="stack"><p class="eyebrow">Grass seed</p><h2>Mixes from Germinal and DLF</h2>
-  <p class="muted" style="font-size:1.1rem">We carry four or five grass seed mixes from Germinal and DLF for reseeding and overseeding. Tell us what the field is for, grazing or silage, and we'll point you to the right one.</p></div>
-  <div class="card"><table class="list"><thead><tr><th>Mix</th><th>Best for</th></tr></thead><tbody>
-  <tr><td><span class="todo">[mix name]</span></td><td><span class="todo">[grazing / silage / both]</span></td></tr>
-  <tr><td><span class="todo">[mix name]</span></td><td><span class="todo">[…]</span></td></tr>
-  <tr><td><span class="todo">[mix name]</span></td><td><span class="todo">[…]</span></td></tr>
-  <tr><td><span class="todo">[mix name]</span></td><td><span class="todo">[…]</span></td></tr>
-  </tbody></table></div>
+  <div class="stack"><p class="eyebrow">Grass seed</p><h2>The best grass seed mixes</h2>
+  <p class="muted" style="font-size:1.1rem">We carry some of the best grass seed mixes available, for reseeding and overseeding. Tell us what the field is for, grazing, silage or both, and we'll point you to the right mix.</p></div>
+  <div class="card stack"><h3>Reseeding?</h3><p class="muted">Ask us about the mix, the fertiliser to get it established and the weed control after.</p></div>
 </div></section>
 ''' + cta_band("Reseeding this year? Talk to us about the mix and the weed control after."))
 
@@ -426,7 +421,7 @@ PAGES["agri-choice.html"] = ("Agri Choice | O'Sullivan Agri", page_hero("Agri Ch
   "Agri Choice is our buying group's own brand. Because the group buys together, you get high quality products at the best prices.") + f'''
 <section class="band band-straw"><div class="wrap split" style="align-items:center">
   <div class="stack"><p class="eyebrow">Our group's own brand</p><h2>High quality, best prices</h2>
-  <p style="font-size:1.14rem">Quality you can rely on, bought together through our buying group <span class="todo">[group name]</span> and passed on at the keenest price we can.</p>
+  <p style="font-size:1.14rem">Quality you can rely on, bought together through our buying group and passed on at the keenest price we can.</p>
   <div><a class="btn btn-green" href="{TEL}">{I["phone"]} Ask about Agri Choice</a></div></div>
   <div class="ac-logo ac-logo-lg"><img src="assets/agri-choice-logo.png" width="1400" height="401" alt="Agri Choice"></div>
 </div></section>
@@ -437,8 +432,8 @@ PAGES["agri-choice.html"] = ("Agri Choice | O'Sullivan Agri", page_hero("Agri Ch
     <div class="card stack"><h3>Mineral bags</h3><p class="muted">Calf/Beef GP, Sheep, Dry Cow and Maize Beet minerals, in 25 kg bags.</p></div>
     <div class="card stack"><h3>Mineral buckets</h3><p class="muted">Mineral and vitamin buckets for stock at grass or indoors.</p></div>
     <div class="card stack"><h3>Cubicle lime</h3><p class="muted">Hydrated Blend, Super P and standard cubicle lime for cleaner, drier beds.</p></div>
-    <div class="card stack"><h3>Silage wrap</h3><p class="muted">Agri Choice silage wrap for baled silage.</p></div>
-    <div class="card stack"><h3>More in the range</h3><p class="muted"><span class="todo">[any other Agri Choice lines?]</span></p></div>
+    <div class="card stack"><h3>Silage wrap</h3><p class="muted">Agri Choice multi-layer bale wrap for baled silage.</p></div>
+    <div class="card stack"><h3>Silage covers</h3><p class="muted">Agri Choice covers for silage pits.</p></div>
   </div>
 </div></section>
 
@@ -446,6 +441,7 @@ PAGES["agri-choice.html"] = ("Agri Choice | O'Sullivan Agri", page_hero("Agri Ch
   <div class="gallery gallery-3">
     {photo("agri-choice-minerals", "Agri Choice mineral and vitamin supplements, bag and bucket range", "Minerals: bag and bucket range", True)}
     {photo("agri-choice-cubicle-lime", "Agri Choice cubicle lime product sheet", "Cubicle lime range")}
+    {photo("agri-choice-bale-wrap", "Box of Agri Choice multi-layer bale wrap", "Multi-layer bale wrap", True)}
   </div>
 </div></section>
 ''' + cta_band("Ask for Agri Choice at the counter, or ring us for a price."))
