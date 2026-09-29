@@ -34,13 +34,7 @@ I = {
 }
 CHECK = I["check"].replace('stroke-width="1.8"', 'stroke-width="3"')
 
-LOGO = ('<svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="10" fill="var(--green)"/>'
-        '<path d="M24 38V12" stroke="var(--straw)" stroke-width="2.6" stroke-linecap="round"/>'
-        '<g fill="var(--straw)"><ellipse cx="19.5" cy="17" rx="3" ry="5" transform="rotate(-30 19.5 17)"/>'
-        '<ellipse cx="28.5" cy="17" rx="3" ry="5" transform="rotate(30 28.5 17)"/>'
-        '<ellipse cx="19.5" cy="25" rx="3" ry="5" transform="rotate(-30 19.5 25)"/>'
-        '<ellipse cx="28.5" cy="25" rx="3" ry="5" transform="rotate(30 28.5 25)"/>'
-        '<ellipse cx="24" cy="10" rx="2.6" ry="4.4"/></g></svg>')
+LOGO = '<img class="logo-mark" src="assets/logo-mark.png" width="104" height="146" alt="">'
 
 # Tramlines: converging rows across a field, the tillage signature
 def tramlines():
@@ -417,7 +411,10 @@ HEAD_TPL = '''<meta charset="utf-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap">
-<link rel="stylesheet" href="styles.css">'''
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<meta property="og:image" content="https://osullivanagri.com/assets/logo.png">
+<meta property="og:site_name" content="O'Sullivan Agri">'''
 
 def full_doc(name, title, body):
     return ('<!doctype html>\n<html lang="en-IE">\n<head>\n' + HEAD_TPL.format(title=title) +

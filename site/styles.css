@@ -9,9 +9,9 @@
   --green-2:#2f6a41;      /* links, buttons */
   --on-green:#f2f4ec;
   --on-green-muted:#bccbbd;
-  --straw:#e3b23c;        /* ripe barley */
+  --straw:#f7c30f;        /* logo gold */
   --straw-ink:#231a02;
-  --straw-soft:#f5e7bf;
+  --straw-soft:#fbeeb8;
   --todo-bg:#fff0a8; --todo-ink:#4d3a00;
   --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
   --body:"Source Sans 3","Segoe UI",Helvetica,Arial,sans-serif;
@@ -20,11 +20,11 @@
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#121814; --surface:#1a221c; --ink:#edf0e8; --muted:#aeb9af; --line:#2c372e;
   --green:#0d1f14; --green-2:#72b384; --on-green:#eef2e9; --on-green-muted:#9fb3a3;
-  --straw:#e8bd52; --straw-ink:#231a02; --straw-soft:#3a3120; --todo-bg:#4a3c0c; --todo-ink:#ffe79c; color-scheme:dark}}
+  --straw:#f7c30f; --straw-ink:#231a02; --straw-soft:#3a3120; --todo-bg:#4a3c0c; --todo-ink:#ffe79c; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#121814; --surface:#1a221c; --ink:#edf0e8; --muted:#aeb9af; --line:#2c372e;
   --green:#0d1f14; --green-2:#72b384; --on-green:#eef2e9; --on-green-muted:#9fb3a3;
-  --straw:#e8bd52; --straw-ink:#231a02; --straw-soft:#3a3120; --todo-bg:#4a3c0c; --todo-ink:#ffe79c; color-scheme:dark}
+  --straw:#f7c30f; --straw-ink:#231a02; --straw-soft:#3a3120; --todo-bg:#4a3c0c; --todo-ink:#ffe79c; color-scheme:dark}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -49,7 +49,7 @@ p{margin:0}
 .site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
 .site-head .wrap{display:flex;align-items:center;gap:20px;padding-block:10px}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);margin-right:auto}
-.logo svg{width:42px;height:42px;flex:none}
+.logo .logo-mark{width:auto;height:46px;flex:none;display:block}
 .logo b{display:block;font-family:var(--display);font-size:1.65rem;font-weight:800;letter-spacing:.03em;line-height:.95}
 .logo span{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.2em;color:var(--muted)}
 .menu{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
