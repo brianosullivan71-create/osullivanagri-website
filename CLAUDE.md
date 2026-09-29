@@ -58,3 +58,9 @@ Yellow `.todo` boxes mark facts not yet confirmed by Brian. Never invent busines
 - Grain intake: barley, wheat, oats, beans, oilseed rape. No "before you draw in" box.
 - Don't copy product photos from other merchants' websites (e.g. Topline Murphys); use Brian's own or manufacturer-provided images.
 - Clipex: official logo and photos from clipex.ie (Brian asked for Clipex images from online). Logo at src/assets/clipex-logo.png on a white tile.
+
+## Domain / DNS (Blacknight DNS Manager, zone id 174041)
+- 29 Sept 2026: removed three stale A records pointing to the old host 81.17.254.65 (@, www, ftp). All now point only to 78.153.209.64 (wpcpanel021).
+- Email is Titan (MX mx0101/mx0102.titan.email). Removed the duplicate SPF record ("include:spf.blacknight.ie"); the single remaining SPF is
+  "v=spf1 a include:spf.blacknight.com include:spf0101.titan.email ~all". Keep exactly one SPF record.
+- SSL: at 29 Sept the Let's Encrypt cert on the server did not yet cover osullivanagri.com / www (issued while DNS was split). cPanel AutoSSL runs daily; if https still fails, run AutoSSL in cPanel > SSL/TLS Status > "Run AutoSSL" (Brian to click).
