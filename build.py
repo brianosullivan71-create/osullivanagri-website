@@ -358,7 +358,7 @@ PAGES["feed.html"] = ("Feed & Minerals | O'Sullivan Agri", page_hero("Feed & min
 </div></section>
 
 <section class="band band-straw"><div class="wrap split">
-  <div class="stack"><p class="eyebrow">Minerals</p><h2>Agri Choice minerals</h2>
+  <div class="stack"><p class="eyebrow">Minerals</p><h2>Minerals, including Agri Choice</h2>
   <p>Minerals are sold separately from the ration, so you can feed the right one at the right rate for each group of stock.</p>
   {photo("agri-choice-minerals", "Agri Choice complementary mineral and vitamin feed supplements, bag and bucket range", "", True)}</div>
   <div class="card" style="background:var(--surface)"><table class="list"><tbody>
@@ -368,7 +368,6 @@ PAGES["feed.html"] = ("Feed & Minerals | O'Sullivan Agri", page_hero("Feed & min
     <tr><th>Agri Choice Sheep</th><td>Ewes</td></tr>
     <tr><th>Sweet Cal Mag</th><td>Grass tetany risk</td></tr>
     <tr><th>Rumbuff + Yeast</th><td>Rumen buffer for cattle on high-meal diets</td></tr>
-    <tr><th>Turbo Power Beef</th><td>Beef cattle</td></tr>
     <tr><th>Lamb 25</th><td>Lambs and store hoggets</td></tr>
   </tbody></table></div>
 </div></section>

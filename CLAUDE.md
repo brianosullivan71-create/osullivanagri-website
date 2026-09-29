@@ -51,3 +51,4 @@ Yellow `.todo` boxes mark facts not yet confirmed by Brian. Never invent busines
 - Agronomy team: Michael O'Sullivan (founder, agronomist), Brian O'Sullivan and Cathal Doran (qualified pesticide advisors and distributors). Advice page mentions VetPal under wormers.
 - Agri Choice logo: src/assets/agri-choice-logo.png (from the Agri Choice Facebook page). Always on a white tile. Don't use the old wheat-field banner as the logo.
 - Home page: no "harvest hours vary" line under opening hours.
+- Feed page minerals: Turbo Power Beef removed (Brian). Rumbuff + Yeast stays but is NOT Agri Choice; heading is "Minerals, including Agri Choice".
