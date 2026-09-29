@@ -13,7 +13,7 @@ PHONE = "053 938 3304"
 TEL = "tel:+353539383304"
 EMAIL = "osagriacc@gmail.com"
 FB = "https://www.facebook.com/osullivan.agri.9/"
-KERRY = 'Asdee, Co. Kerry <span class="todo">[check spelling of the Kerry branch town]</span>'
+KERRY = 'Asdee, Co. Kerry'
 MAPS = "https://www.google.com/maps/search/?api=1&query=O%27Sullivan%20Agricultural%20Services%20Y21%20T189"
 
 def ico(paths):
@@ -129,7 +129,7 @@ TILES = [
  ("fertiliser.html", "fert", "Fertiliser", "A broad range, including many of our own custom blends."),
  ("crop-protection.html", "spray", "Crop protection", "Herbicides, fungicides and insecticides from a DAFM-registered store."),
  ("seed.html", "seed", "Seed", "Cereals, beans, rape and grass seed from Germinal and DLF."),
- ("feed.html", "feed", "Feed & minerals", "Our own rations milled here, straights and Agri Choice minerals."),
+ ("feed.html", "feed", "Feed & minerals", "Straights ground in our own mill, house ration recipes and Agri Choice minerals."),
  ("animal-health.html", "health", "Animal health", "A full veterinary range, with prescriptions sorted in store through VetPal."),
  ("hardware.html", "hardware", "Agri hardware", "The yard and farm essentials you'd otherwise drive for."),
  ("grain.html", "grain", "Grain intake", "We take in barley, wheat, oats and beans at harvest."),
@@ -149,7 +149,7 @@ PAGES["index.html"] = ("O'Sullivan Agri | Farm supplies & advice, Camolin", f'''
     <div>
       <p class="eyebrow">Camolin, Co. Wexford · Family run since 1985</p>
       <h1>Everything for the farm, <em>and the advice to go with it</em></h1>
-      <p class="lede">Fertiliser, sprays, seed, our own feed rations, minerals, animal remedies and hardware, all in one yard. Our qualified agronomists will walk your crops and help you get the most from what you buy.</p>
+      <p class="lede">Fertiliser, sprays, seed, feed straights, minerals, animal remedies and hardware, all in one yard. Our qualified agronomists will walk your crops and help you get the most from what you buy.</p>
       <div class="actions"><a class="btn btn-straw" href="{TEL}">{I["phone"]} Call {PHONE}</a><a class="btn btn-line" href="#range">See everything we do</a></div>
     </div>
     <aside class="hero-card" aria-label="Opening hours and address">
@@ -201,12 +201,13 @@ PAGES["index.html"] = ("O'Sullivan Agri | Farm supplies & advice, Camolin", f'''
 </div></section>
 
 <section class="band band-white"><div class="wrap split">
-  <div class="stack"><p class="eyebrow">Milled in Camolin</p><h2>Our own rations, from native grain</h2>
-  <p class="muted" style="font-size:1.1rem">We grind barley, beans and oats here in the mill and make up our own beef, dairy and sheep rations. Several of our beef rations are 100% native grain.</p>
+  <div class="stack"><p class="eyebrow">Ground in Camolin</p><h2>Feed straights, with the rations to match</h2>
+  <p class="muted" style="font-size:1.1rem">We grind barley, beans and oats in our own mill and sell them as straights, along with maize and soya. Our house ration recipes show you how to put them together for beef, dairy and sheep, and several of the beef recipes are 100% native grain.</p>
+  <p class="muted" style="font-size:.86rem">All feed ingredients are supplied as straights, not pre-mixed rations. Minerals are sold separately and are not mixed through the straights.</p>
   <div><a class="btn btn-green" href="feed.html">See our rations</a></div></div>
   <div class="grid-2">
-    <div class="card"><p class="pct">14</p><h4>Rations on our board</h4><p class="muted">Beef, dairy, sheep and hogget, from 14% to 24% protein.</p></div>
-    <div class="card"><p class="pct">100%</p><h4>Native grain</h4><p class="muted">GP Beef 14% and 16% are all barley, beans and oats.</p></div>
+    <div class="card"><p class="pct">14</p><h4>House ration recipes</h4><p class="muted">Beef, dairy, sheep and hogget, from 14% to 24% protein.</p></div>
+    <div class="card"><p class="pct">100%</p><h4>Native grain</h4><p class="muted">The GP Beef 14% and 16% recipes are all barley, beans and oats.</p></div>
     <div class="card"><p class="pct">6</p><h4>Straights stocked</h4><p class="muted">Barley, beans, oats, maize, soya bean meal, soya hulls.</p></div>
     <div class="card"><p class="pct">UFL</p><h4>Worked out properly</h4><p class="muted">We check protein and energy against your stock and silage.</p></div>
   </div>
@@ -335,17 +336,18 @@ def rgroup(title, rows):
         for n, p, x in rows) + '</div>')
 
 PAGES["feed.html"] = ("Feed & Minerals | O'Sullivan Agri", page_hero("Feed & minerals",
-  "Rations milled here in Camolin",
-  "We grind barley, beans and oats in our own mill and make up beef, dairy and sheep rations. Plus straights, and Agri Choice minerals to go with them.") + f'''
+  "Feed straights, ground in Camolin",
+  "We grind barley, beans and oats in our own mill and sell all our feed as straights. Our house ration recipes show you how to put them together for beef, dairy and sheep, with Agri Choice minerals to go with them.") + f'''
 <section class="band"><div class="wrap">
-  <div class="head"><p class="eyebrow">Our own rations</p><h2>The board in the mill</h2>
-  <p class="muted">Our house rations, by protein. Ask us about any of them, or we can make up a mix to suit your stock.</p></div>
+  <div class="head"><p class="eyebrow">House ration recipes</p><h2>Recipes for beef, dairy and sheep</h2>
+  <p class="muted">Our house ration recipes, by protein, all made from the straights we sell. Ask us about any of them, or we'll work out a recipe to suit your stock.</p></div>
   <div class="rations">
     {rgroup("Beef", [("GP Beef 14%","14%","100% native grain"),("GP Beef 16%","16%","100% native grain"),("Beef Finisher 14%","14%",""),("Weanling 18%","18%",""),("Beef Finisher 18% (maize/beet)","18%","")])}
     {rgroup("Dairy", [("Dairy 14%","14%",""),("Dairy 16%","16%",""),("Dairy 18%","18%",""),("Dairy 22%","22%",""),("Dairy 24%","24%","")])}
     {rgroup("Sheep", [("Sheep 18%","18%",""),("Sheep 21% pre/post lambing","21%",""),("Hogget 14%","14%","")])}
   </div>
-  <p class="note" style="margin-top:22px">Native grain means Irish barley, beans and oats. The more native grain in a ration, the more of it we've grown and milled close to home.</p>
+  <p class="note" style="margin-top:22px">Native grain means Irish barley, beans and oats. The more native grain in a recipe, the more of it is grown and ground close to home.</p>
+  <p class="muted" style="margin-top:12px;font-size:.86rem">All feed ingredients are supplied as straights, not pre-mixed rations. Minerals are sold separately and are not mixed through the straights.</p>
 </div></section>
 
 <section class="band band-white"><div class="wrap split">

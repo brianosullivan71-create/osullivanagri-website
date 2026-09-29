@@ -36,10 +36,13 @@ Yellow `.todo` boxes mark facts not yet confirmed by Brian. Never invent busines
 - Grain intake at harvest: barley, wheat, oats, beans.
 - Local customer base: write for local farmers, plain language.
 - Founded 1985 by Michael O'Sullivan (Brian's father) in Camolin; family business.
-- Second branch in Co. Kerry — Brian said "Ashtead"; site shows "Asdee" pending his confirmation.
+- Second branch: Asdee, Co. Kerry (confirmed).
 - Very extensive veterinary range; licensed merchant; linked in with VetPal for in-store vet prescriptions.
 - The bulk bags photo (bulk-bags-lime.jpg) is HYDRATED LIME, not fertiliser — it belongs with animal health / hygiene.
 - Sells AdBlue.
 - Agri Choice range: mineral bags, mineral buckets, cubicle lime, silage wrap (more to confirm). Message: high quality products at the best prices. Has its own page (agri-choice.html).
 - Photos come from the O' Sullivan Agri Facebook business page (facebook.com/profile.php?id=100088371622847),
   cleaned with tools/clean_photos.py (glare, colour cast, shadows, sharpen, 1600px).
+- FEED IS NEVER PRE-MIXED: all feed is sold as straights; house rations are recipes, not a mixed product.
+  Minerals are sold separately and not mixed through the straights. Keep the small disclaimer wherever feed
+  is discussed, and never write "we make up / mix rations".
