@@ -111,6 +111,11 @@ def page_hero(eyebrow, title, lede, crumb=True):
 def checks(items, cls=""):
     return f'<ul class="checks {cls}">' + "".join(f"<li>{CHECK}<span>{x}</span></li>" for x in items) + "</ul>"
 
+def photo(name, alt, cap="", tall=False):
+    cls = "photo photo-tall" if tall else "photo"
+    c = f"<figcaption>{cap}</figcaption>" if cap else ""
+    return f'<figure class="{cls}"><img src="assets/photos/{name}.jpg" alt="{alt}" loading="lazy">{c}</figure>'
+
 def cta_band(text="Not sure what you need? Ring us or call in and we'll work it out with you."):
     return f'''<section class="band band-straw"><div class="wrap split" style="align-items:center">
 <h2>{text}</h2>
@@ -160,6 +165,17 @@ PAGES["index.html"] = ("O'Sullivan Agri | Farm supplies & advice, Camolin", f'''
   {tiles()}
 </div></section>
 
+<section class="band band-white"><div class="wrap">
+  <div class="head"><p class="eyebrow">Call in</p><h2>A shop worth the stop</h2>
+  <p class="muted">Aisles of animal health, hardware, workwear and yard supplies, with someone at the counter who knows what you need.</p></div>
+  <div class="gallery">
+    {photo("shop-counter", "Shop aisle leading to the wooden counter", "The shop and counter", True)}
+    {photo("shop-aisle-3", "Aisle of hardware and yard supplies", "Hardware and yard supplies", True)}
+    {photo("shop-animal-health", "Shelves of animal health products", "Animal health", True)}
+    {photo("footwear", "Boots and footwear on display", "Footwear", True)}
+  </div>
+</div></section>
+
 <section class="band band-green"><div class="wrap split">
   <div class="stack"><p class="eyebrow">Advice first</p><h2>Talk to an agronomist before you spend</h2>
   <p class="muted" style="font-size:1.14rem">We're qualified agronomists, not just a counter. Tell us what's happening in the field or the shed and we'll come out, look at it and give you a written recommendation.</p>
@@ -186,9 +202,9 @@ PAGES["index.html"] = ("O'Sullivan Agri | Farm supplies & advice, Camolin", f'''
 <section class="band band-straw"><div class="wrap split" style="align-items:center">
   <div class="stack"><p class="eyebrow">Our group's own brand</p><span class="brand-mark">{I["check"]}Agri Choice</span>
   <p style="font-size:1.14rem">Agri Choice is the own brand of our buying group <span class="todo">[group name]</span>. It gives you good quality at a keener price across a lot of the agri range.</p></div>
-  <div class="card" style="background:var(--surface)"><h4>Agri Choice in our yard</h4>
+  <div class="card stack" style="background:var(--surface)">{photo("agri-choice-banner", "Agri Choice logo over a field of ripe barley")}<h4>Agri Choice in our yard</h4>
   <ul style="margin:10px 0 0;padding-left:1.2em;line-height:1.9">
-  <li>Calf/Beef GP mineral</li><li>Sheep mineral</li><li>Dry Cow mineral</li><li>Maize Beet mineral</li>
+  <li>Calf/Beef GP, Sheep, Dry Cow and Maize Beet minerals</li><li>Mineral and vitamin supplements in bags and buckets</li><li>Cubicle lime: Hydrated Blend, Super P and standard</li>
   <li><span class="todo">[other Agri Choice lines?]</span></li></ul></div>
 </div></section>
 
@@ -243,7 +259,8 @@ PAGES["fertiliser.html"] = ("Fertiliser | O'Sullivan Agri", page_hero("Fertilise
   <div class="stack"><p class="eyebrow">Our own blends</p><h2>Made for your fields</h2>
   <p class="muted" style="font-size:1.1rem">Many of the blends we sell are our own. Bring in your soil results and we'll recommend the blend and rate for each field, for grazing, silage or tillage crops.</p>
   <div><a class="btn btn-green" href="advice.html">Get a fertiliser plan</a></div></div>
-  <div class="card"><h3>Our blends</h3><p class="muted" style="margin-top:8px"><span class="todo">[list your main blends, e.g. name + N-P-K + what it's for]</span></p></div>
+  <div class="stack">{photo("bulk-bags-lime", "Bulk bags of fertiliser and lime in the store", "Bulk bags in the store")}
+  <div class="card"><h3>Our blends</h3><p class="muted" style="margin-top:8px"><span class="todo">[list your main blends, e.g. name + N-P-K + what it's for]</span></p></div></div>
 </div></section>
 <section class="band band-white"><div class="wrap">
   <div class="head"><p class="eyebrow">The range</p><h2>What we stock</h2></div>
@@ -329,7 +346,8 @@ PAGES["feed.html"] = ("Feed & Minerals | O'Sullivan Agri", page_hero("Feed & min
 
 <section class="band band-straw"><div class="wrap split">
   <div class="stack"><p class="eyebrow">Minerals</p><h2>Agri Choice minerals</h2>
-  <p>Minerals are sold separately from the ration, so you can feed the right one at the right rate for each group of stock.</p></div>
+  <p>Minerals are sold separately from the ration, so you can feed the right one at the right rate for each group of stock.</p>
+  {photo("agri-choice-minerals", "Agri Choice complementary mineral and vitamin feed supplements, bag and bucket range", "", True)}</div>
   <div class="card" style="background:var(--surface)"><table class="list"><tbody>
     <tr><th>Agri Choice Calf/Beef GP</th><td>Calves and beef cattle</td></tr>
     <tr><th>Agri Choice Dry Cow</th><td>Dry cows before calving</td></tr>
@@ -350,8 +368,9 @@ PAGES["animal-health.html"] = ("Animal Health | O'Sullivan Agri", page_hero("Ani
   <div class="stack"><p class="eyebrow">What we stock</p><h2>For cattle and sheep</h2>
   {checks(["Wormers for cattle and sheep",
            "<span class=todo>[fluke doses, pour-ons, vaccines, footbaths, other lines?]</span>"], "on-light")}</div>
+  <div class="stack">{photo("shop-animal-health", "Animal health shelves in the shop", "Animal health in the shop")}
   <div class="card stack"><h3>Choosing the right wormer</h3>
-  <p class="muted">Using the right active ingredient, at the right time and the right dose for the animal's weight, is what keeps wormers working. Ask us and we'll talk it through.</p></div>
+  <p class="muted">Using the right active ingredient, at the right time and the right dose for the animal's weight, is what keeps wormers working. Ask us and we'll talk it through.</p></div></div>
 </div></section>
 ''' + cta_band("Not sure which dose to use? Ask us before you buy."))
 
@@ -360,14 +379,17 @@ PAGES["hardware.html"] = ("Agri Hardware | O'Sullivan Agri", page_hero("Agri har
   "Yard and farm essentials, all here in Camolin.") + f'''
 <section class="band"><div class="wrap">
   <div class="head"><p class="eyebrow">The range</p><h2>What's in the shop</h2>
-  <p class="muted"><span class="todo">We'll fill these in together, one group at a time.</span></p></div>
-  <div class="grid-3">
-    <div class="card"><h3><span class="todo">[group, e.g. Fencing]</span></h3><p class="muted"><span class="todo">[what's in it]</span></p></div>
-    <div class="card"><h3><span class="todo">[group, e.g. Gates & hurdles]</span></h3><p class="muted"><span class="todo">[what's in it]</span></p></div>
-    <div class="card"><h3><span class="todo">[group, e.g. Water & troughs]</span></h3><p class="muted"><span class="todo">[what's in it]</span></p></div>
-    <div class="card"><h3><span class="todo">[group, e.g. Tools]</span></h3><p class="muted"><span class="todo">[what's in it]</span></p></div>
-    <div class="card"><h3><span class="todo">[group, e.g. Dairy & hygiene]</span></h3><p class="muted"><span class="todo">[what's in it]</span></p></div>
-    <div class="card"><h3><span class="todo">[group, e.g. Workwear]</span></h3><p class="muted"><span class="todo">[what's in it]</span></p></div>
+  <p class="muted">A look at what's in the shed and on the shelves. <span class="todo">[we'll add brands and detail for each group together]</span></p></div>
+  <div class="gallery gallery-3">
+    {photo("galvanised-gates", "Galvanised gates stacked in the shed", "Galvanised gates")}
+    {photo("fencing-stakes", "Pallets of round fencing stakes", "Fencing stakes")}
+    {photo("sheep-wire", "Rolls of sheep wire on pallets", "Sheep wire", True)}
+    {photo("troughs-and-posts", "Water troughs and electric fence posts", "Water troughs and electric fencing")}
+    {photo("fixings-bins", "Wall of bins with nuts, bolts and fixings", "Nuts, bolts and fixings")}
+    {photo("footwear", "Boots and footwear on display", "Footwear", True)}
+    {photo("hardware-wall", "Tools, lubricants and hardware on a display wall", "Tools and workshop", True)}
+    {photo("shop-shelving", "Shelving of hardware with brushes", "Brushes and yard tools", True)}
+    {photo("electric-sprayer", "Seaflo 16 litre electric knapsack sprayer", "Knapsack sprayers", True)}
   </div>
 </div></section>
 ''' + cta_band("Looking for something in particular? Ring us and we'll check."))
@@ -394,7 +416,8 @@ PAGES["contact.html"] = ("Contact | O'Sullivan Agri", page_hero("Contact",
 </div></section>
 <section class="band band-white"><div class="wrap split">
   <div class="stack"><p class="eyebrow">Opening hours</p><h2>When we're open</h2>
-  <p class="muted">Harvest hours vary with the weather. Ring ahead if you're coming late.</p></div>
+  <p class="muted">Harvest hours vary with the weather. Ring ahead if you're coming late.</p>
+  {photo("shop-aisle-1", "Aisle in the O'Sullivan Agri shop")}</div>
   <div class="card"><table class="list hours-t"><tbody>
     <tr><th scope="row">Monday – Friday</th><td>9.00am – 6.00pm</td></tr>
     <tr><th scope="row">Saturday</th><td>9.00am – 1.00pm</td></tr>
