@@ -469,26 +469,37 @@ PAGES["hardware.html"] = ("Agri Hardware | O'Sullivan Agri", page_hero("Agri har
   </div>
 </div></section>
 
-<section class="band band-white"><div class="wrap split" style="align-items:center">
+<section class="band band-white"><div class="wrap">
+  <div class="head"><p class="eyebrow">Clipex</p><h2>The full Clipex range</h2>
+  <p class="muted">Clipex steel posts and fencing for sheep, cattle and electric fences. Ask us about the posts and fittings for the job you have in mind.</p></div>
+  <div class="gallery">
+    {photo("clipex-field-2", "Sheep behind a Clipex post and wire fence", "Sheep fencing on Clipex posts. Photo: Clipex")}
+    {photo("clipex-field-1", "Cattle behind a Clipex electric fence line", "Electric fencing on Clipex posts. Photo: Clipex")}
+    {photo("clipex-sheep-fence", "Clipex posts with stock wire along a ditch", "Stock fencing. Photo: Clipex")}
+    {photo("clipex-field-3", "Clipex posts running across a grass field", "Paddock fencing. Photo: Clipex")}
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap split" style="align-items:center">
   <div class="stack"><p class="eyebrow">Gibney</p><h2>Gates, feeders and troughs</h2>
   <p class="muted" style="font-size:1.1rem">We stock Gibney galvanised gates, along with Gibney drinking troughs, round feeders and hanging posts.</p>
   {checks(["Galvanised gates", "Drinking troughs", "Round feeders", "Hanging posts"], "on-light")}</div>
   {photo("galvanised-gates", "Gibney galvanised gates stacked in the shed", "Gibney galvanised gates")}
 </div></section>
 
-<section class="band"><div class="wrap split" style="align-items:center">
+<section class="band band-white"><div class="wrap split" style="align-items:center">
   <div class="stack"><p class="eyebrow">Water fittings</p><h2>Philmac and Agriflow</h2>
   <p class="muted" style="font-size:1.1rem">A very broad range of Philmac and Agriflow water fittings for troughs, yards and field supplies.</p></div>
   <div class="card stack"><h3>Water fittings</h3><p class="muted">Fittings, connectors and valves to get water where your stock need it.</p></div>
 </div></section>
 
-<section class="band band-white"><div class="wrap split" style="align-items:center">
+<section class="band"><div class="wrap split" style="align-items:center">
   <div class="stack"><p class="eyebrow">Workwear & footwear</p><h2>Cottonmount and Portwest</h2>
   <p class="muted" style="font-size:1.1rem">Work clothing from Cottonmount and Portwest, with boots and footwear for the yard and the field.</p></div>
   {photo("footwear", "Boots and footwear on display", "Footwear")}
 </div></section>
 
-<section class="band"><div class="wrap">
+<section class="band band-white"><div class="wrap">
   <div class="head"><p class="eyebrow">In the shop</p><h2>Tools, fixings and yard essentials</h2></div>
   <div class="gallery">
     {photo("fixings-bins", "Wall of bins with nuts, bolts and fixings", "Nuts, bolts and fixings")}
