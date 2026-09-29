@@ -15,7 +15,7 @@
   --todo-bg:#fff0a8; --todo-ink:#4d3a00;
   --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
   --body:"Source Sans 3","Segoe UI",Helvetica,Arial,sans-serif;
-  --wrap:1160px; --r:12px;
+  --wrap:1280px; --r:12px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#121814; --surface:#1a221c; --ink:#edf0e8; --muted:#aeb9af; --line:#2c372e;
@@ -47,18 +47,19 @@ p{margin:0}
 
 /* ---------- header ---------- */
 .site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
-.site-head .wrap{display:flex;align-items:center;gap:20px;padding-block:10px}
+.site-head .wrap{display:flex;align-items:center;gap:12px 20px;padding-block:10px;flex-wrap:wrap}
+@media (min-width:981px){.site-head .menu{order:3;width:100%;justify-content:space-between;border-top:1px solid var(--line);padding-top:6px}}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);margin-right:auto}
 .logo .logo-mark{width:auto;height:46px;flex:none;display:block}
 .logo b{display:block;font-family:var(--display);font-size:1.65rem;font-weight:800;letter-spacing:.03em;line-height:.95}
 .logo span{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.2em;color:var(--muted)}
 .menu{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
-.menu a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.96rem;padding:8px 10px;border-radius:6px}
+.menu a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.94rem;padding:8px 8px;border-radius:6px;white-space:nowrap}
 .menu a:hover,.menu a[aria-current="page"]{background:var(--surface);color:var(--green-2)}
 .menu-toggle{display:none}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:10px 20px;border-radius:8px;font-weight:700;text-decoration:none;font-size:1.02rem;border:2px solid transparent;cursor:pointer;font-family:var(--body)}
 .btn svg{width:18px;height:18px;flex:none}
-.btn-straw{background:var(--straw);color:var(--straw-ink)}
+.btn-straw,.hero a.btn-straw,.band-green a.btn-straw{background:var(--straw);color:var(--straw-ink)}
 .btn-straw:hover{filter:brightness(1.06)}
 .btn-green{background:var(--green-2);color:#fff}
 :root[data-theme="dark"] .btn-green{color:#0d1f14}
@@ -67,7 +68,7 @@ p{margin:0}
 .btn-line:hover{background:rgba(127,127,127,.12)}
 .head-call{white-space:nowrap}
 
-@media (max-width:1240px){
+@media (max-width:980px){
   .menu-toggle{display:inline-flex;min-height:44px;padding:8px 14px;border-radius:8px;border:2px solid var(--ink);background:transparent;color:var(--ink);font-weight:700;font-family:var(--body);font-size:.95rem;cursor:pointer}
   .menu{display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 20px 18px;flex-direction:column;align-items:stretch}
   .menu.open{display:flex}
@@ -200,3 +201,8 @@ table.list td.num{text-align:right;white-space:nowrap}
 .hero-photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
 @media (max-width:980px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery-3{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-photo img{aspect-ratio:4/3}}
 @media (max-width:600px){.gallery,.gallery-3{grid-template-columns:1fr 1fr;gap:10px}}
+
+/* Agri Choice logo sits on its own white tile so its navy and green read in both themes */
+.ac-logo{background:#ffffff;border-radius:var(--r);padding:18px 22px;max-width:460px}
+.ac-logo img{display:block;width:100%;height:auto}
+.ac-logo-lg{max-width:none;padding:32px 36px}

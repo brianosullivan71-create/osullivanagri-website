@@ -155,7 +155,6 @@ PAGES["index.html"] = ("O'Sullivan Agri | Farm supplies & advice, Camolin", f'''
     <aside class="hero-card" aria-label="Opening hours and address">
       <h3>Open today?</h3>
       <div class="stack" style="gap:8px;margin-top:12px">{HOURS_ROWS}</div>
-      <p class="muted" style="margin-top:12px;font-size:.92rem">Harvest hours vary. Ring ahead if you're coming late.</p>
       <dl class="facts"><dt>Find us</dt><dd>Baylands, Camolin<br><b>Y21 T189</b> · <a href="{MAPS}" target="_blank" rel="noopener">Directions</a></dd>
       <dt>Email</dt><dd><a href="mailto:{EMAIL}">{EMAIL}</a></dd></dl>
     </aside>
@@ -164,7 +163,7 @@ PAGES["index.html"] = ("O'Sullivan Agri | Farm supplies & advice, Camolin", f'''
 
 <section class="band" id="range"><div class="wrap">
   <div class="head"><p class="eyebrow">What we do</p><h2>More in the yard than you might think</h2>
-  <p class="muted">A lot of customers know us for one or two things and buy the rest elsewhere. Here's the full picture.</p></div>
+  <p class="muted">A lot of customers know us for one or two things, but here is the full picture.</p></div>
   {tiles()}
 </div></section>
 
@@ -195,7 +194,7 @@ PAGES["index.html"] = ("O'Sullivan Agri | Farm supplies & advice, Camolin", f'''
   <div><a class="btn btn-straw" href="advice.html">How our advice works</a></div></div>
   {checks(["Crop walks with a written recommendation you can act on",
            "Spray programmes for cereals, beans and grassland",
-           "Fertiliser plans built from your soil results, with our own blends",
+           "Soil samples sent for analysis, and a fertiliser plan built from the results",
            "Rations and mineral rates worked out for your stock and silage",
            "Help choosing the right wormer for the job"])}
 </div></section>
@@ -214,9 +213,9 @@ PAGES["index.html"] = ("O'Sullivan Agri | Farm supplies & advice, Camolin", f'''
 </div></section>
 
 <section class="band band-straw"><div class="wrap split" style="align-items:center">
-  <div class="stack"><p class="eyebrow">Our group's own brand</p><span class="brand-mark">{I["check"]}Agri Choice</span>
+  <div class="stack"><p class="eyebrow">Our group's own brand</p><div class="ac-logo"><img src="assets/agri-choice-logo.png" width="1400" height="401" alt="Agri Choice"></div>
   <p style="font-size:1.14rem">Agri Choice is the own brand of our buying group <span class="todo">[group name]</span>. High quality products, bought together at the best prices.</p></div>
-  <div class="card stack" style="background:var(--surface)">{photo("agri-choice-banner", "Agri Choice logo over a field of ripe barley")}<h4>Agri Choice in our yard</h4>
+  <div class="card stack" style="background:var(--surface)"><h4>Agri Choice in our yard</h4>
   <ul style="margin:10px 0 0;padding-left:1.2em;line-height:1.9">
   <li>Mineral bags and mineral buckets</li><li>Cubicle lime: Hydrated Blend, Super P and standard</li><li>Silage wrap</li></ul>
   <div><a class="btn btn-green" href="agri-choice.html">See the Agri Choice range</a></div></div>
@@ -226,8 +225,7 @@ PAGES["index.html"] = ("O'Sullivan Agri | Farm supplies & advice, Camolin", f'''
   <div class="stack"><p class="eyebrow">Find us</p><h2>Baylands, Camolin</h2>
   <p class="muted" style="font-size:1.1rem">Put <b>Y21 T189</b> into your phone and it'll bring you to the gate.</p>
   <div class="actions" style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-green" href="{MAPS}" target="_blank" rel="noopener">{I["pin"]} Get directions</a><a class="btn btn-line" href="{FB}" target="_blank" rel="noopener">Follow us on Facebook</a></div></div>
-  <div class="card"><h3>Opening hours</h3><div class="stack" style="gap:10px;margin-top:14px">{HOURS_ROWS}</div>
-  <p class="muted" style="margin-top:14px">Harvest hours vary with the weather. Ring ahead.</p></div>
+  <div class="card"><h3>Opening hours</h3><div class="stack" style="gap:10px;margin-top:14px">{HOURS_ROWS}</div></div>
 </div></section>
 ''')
 
@@ -239,10 +237,10 @@ PAGES["advice.html"] = ("Agronomy Advice | O'Sullivan Agri", page_hero("Agronomy
   <div class="grid-3">
     <div class="card stack"><div class="tile" style="padding:0;border:0;background:none"><div class="ico">{I["spray"]}</div></div><h3>Crop walks</h3><p class="muted">We walk your cereals, beans and rape through the season and give you a written recommendation with products, rates and timing.</p></div>
     <div class="card stack"><div class="tile" style="padding:0;border:0;background:none"><div class="ico">{I["advice"]}</div></div><h3>Problems in the field</h3><p class="muted">Weeds, disease or a nutrient deficiency showing up. We'll identify it and tell you what will fix it.</p></div>
-    <div class="card stack"><div class="tile" style="padding:0;border:0;background:none"><div class="ico">{I["fert"]}</div></div><h3>Fertiliser plans</h3><p class="muted">Bring your soil results and we'll match the fertiliser to each field, with our own custom blends where they suit. <span class="todo">[do you take soil samples too?]</span></p></div>
+    <div class="card stack"><div class="tile" style="padding:0;border:0;background:none"><div class="ico">{I["fert"]}</div></div><h3>Soil analysis & fertiliser plans</h3><p class="muted">Drop your soil samples in to us and we'll send them off for analysis. When the results are back, we'll go through them with you if you want and make a fertiliser plan, with our own blends where they suit.</p></div>
     <div class="card stack"><div class="tile" style="padding:0;border:0;background:none"><div class="ico">{I["seed"]}</div></div><h3>Grassland & reseeding</h3><p class="muted">Choosing the right grass mix, weed control in new and old swards, and fertiliser for grazing and silage.</p></div>
     <div class="card stack"><div class="tile" style="padding:0;border:0;background:none"><div class="ico">{I["feed"]}</div></div><h3>Rations & minerals</h3><p class="muted">Tell us your stock, their weight and your silage quality. We'll suggest a ration, check its protein and energy, and set a mineral rate.</p></div>
-    <div class="card stack"><div class="tile" style="padding:0;border:0;background:none"><div class="ico">{I["health"]}</div></div><h3>Wormers & dosing</h3><p class="muted">Picking the right active ingredient for the time of year and the stock, and dosing to weight.</p></div>
+    <div class="card stack"><div class="tile" style="padding:0;border:0;background:none"><div class="ico">{I["health"]}</div></div><h3>Wormers & dosing</h3><p class="muted">Picking the right active ingredient for the time of year and the stock, and dosing to weight. We're linked in with vets through VetPal, so we can sort your prescription in store. <a href="animal-health.html">How VetPal works</a></p></div>
   </div>
 </div></section>
 
@@ -258,10 +256,11 @@ PAGES["advice.html"] = ("Agronomy Advice | O'Sullivan Agri", page_hero("Agronomy
 
 <section class="band"><div class="wrap split">
   <div class="stack"><p class="eyebrow">Who you'll deal with</p><h2>Our agronomy team</h2>
-  <p class="muted">Both are qualified pesticide distributors registered with the Department of Agriculture. <span class="todo">[OK to name staff on the site? Add qualifications / mobile numbers?]</span></p></div>
-  <div class="grid-2">
-    <div class="card"><h3>Brian O'Sullivan</h3><p class="muted">Agronomist</p></div>
-    <div class="card"><h3>Cathal Doran</h3><p class="muted">Sales & agronomy</p></div>
+  <p class="muted">Agronomists who know the ground around here. Brian and Cathal are qualified pesticide advisors and distributors, registered with the Department of Agriculture.</p></div>
+  <div class="stack">
+    <div class="card"><h3>Michael O'Sullivan</h3><p class="muted">Founder and agronomist. Michael started the business in 1985.</p></div>
+    <div class="card"><h3>Brian O'Sullivan</h3><p class="muted">Agronomist. Qualified pesticide advisor and distributor.</p></div>
+    <div class="card"><h3>Cathal Doran</h3><p class="muted">Sales and agronomy. Qualified pesticide advisor and distributor.</p></div>
   </div>
 </div></section>
 ''' + cta_band("Seeing something in a crop you're not sure about? Ring us before you spray."))
@@ -271,23 +270,25 @@ PAGES["fertiliser.html"] = ("Fertiliser | O'Sullivan Agri", page_hero("Fertilise
   "We carry a broad range of fertiliser for grassland and tillage, and many of our own custom-made blends to suit what your ground actually needs.") + f'''
 <section class="band"><div class="wrap split">
   <div class="stack"><p class="eyebrow">Our own blends</p><h2>Made for your fields</h2>
-  <p class="muted" style="font-size:1.1rem">Many of the blends we sell are our own. Bring in your soil results and we'll recommend the blend and rate for each field, for grazing, silage or tillage crops.</p>
+  <p class="muted" style="font-size:1.1rem">Many of the blends we sell are our own. Drop your soil samples in to us and we'll send them off for analysis, then go through the results with you and recommend the blend and rate for each field, for grazing, silage or tillage crops.</p>
   <div><a class="btn btn-green" href="advice.html">Get a fertiliser plan</a></div></div>
-  <div class="card"><h3>Our blends</h3><p class="muted" style="margin-top:8px"><span class="todo">[list your main blends, e.g. name + N-P-K + what it's for]</span></p></div>
+  <div class="card stack"><h3>Why a blend made for your ground</h3>
+  <p class="muted">Every field is different. We match our blends to what your soil analysis shows, so each acre gets the nitrogen, phosphorus, potash and sulphur it actually needs.</p>
+  <p class="muted">You're not paying for nutrients the ground already has, or coming up short where it counts. That's better value from every bag.</p></div>
 </div></section>
 <section class="band band-white"><div class="wrap">
   <div class="head"><p class="eyebrow">The range</p><h2>What we stock</h2></div>
   <div class="grid-3">
-    <div class="card"><h3>Grassland</h3><p class="muted"><span class="todo">[e.g. compounds, straight N, CAN, protected urea?]</span></p></div>
-    <div class="card"><h3>Tillage</h3><p class="muted"><span class="todo">[e.g. seedbed compounds, top dressing N, sulphur products?]</span></p></div>
-    <div class="card"><h3>Lime & trace elements</h3><p class="muted"><span class="todo">[do you sell lime, granulated lime or trace element products?]</span></p></div>
+    <div class="card"><h3>Grassland</h3></div>
+    <div class="card"><h3>Tillage</h3></div>
+    <div class="card"><h3>Lime & trace elements</h3></div>
   </div>
 </div></section>
-''' + cta_band("Got your soil results back? Bring them in and we'll match the blend."))
+''' + cta_band("Drop your soil samples in and we'll send them off for analysis."))
 
 PAGES["crop-protection.html"] = ("Crop Protection | O'Sullivan Agri", page_hero("Crop protection",
   "Sprays, with the advice to use them right",
-  "Herbicides, fungicides, insecticides and more for cereals, beans, rape and grassland, sold from a DAFM-registered store by qualified pesticide distributors.") + f'''
+  "Herbicides, fungicides, insecticides and more for cereals, beans, rape and grassland, sold from a DAFM-registered store by qualified pesticide advisors and distributors.") + f'''
 <section class="band"><div class="wrap split">
   <div class="stack"><p class="eyebrow">What we carry</p><h2>For every stage of the season</h2>
   {checks(["Herbicides for cereals, beans, rape and grassland",
@@ -421,10 +422,10 @@ PAGES["agri-choice.html"] = ("Agri Choice | O'Sullivan Agri", page_hero("Agri Ch
   "Agri Choice: high quality, at the best price",
   "Agri Choice is our buying group's own brand. Because the group buys together, you get high quality products at the best prices.") + f'''
 <section class="band band-straw"><div class="wrap split" style="align-items:center">
-  <div class="stack"><span class="brand-mark">Agri Choice</span>
+  <div class="stack"><p class="eyebrow">Our group's own brand</p><h2>High quality, best prices</h2>
   <p style="font-size:1.14rem">Quality you can rely on, bought together through our buying group <span class="todo">[group name]</span> and passed on at the keenest price we can.</p>
   <div><a class="btn btn-green" href="{TEL}">{I["phone"]} Ask about Agri Choice</a></div></div>
-  {photo("agri-choice-banner", "Agri Choice logo over a field of ripe barley")}
+  <div class="ac-logo ac-logo-lg"><img src="assets/agri-choice-logo.png" width="1400" height="401" alt="Agri Choice"></div>
 </div></section>
 
 <section class="band"><div class="wrap">

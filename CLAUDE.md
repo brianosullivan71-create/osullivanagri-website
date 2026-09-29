@@ -46,3 +46,8 @@ Yellow `.todo` boxes mark facts not yet confirmed by Brian. Never invent busines
 - FEED IS NEVER PRE-MIXED: all feed is sold as straights; house rations are recipes, not a mixed product.
   Minerals are sold separately and not mixed through the straights. Keep the small disclaimer wherever feed
   is discussed, and never write "we make up / mix rations".
+- Soil: farmers drop soil samples in; the business sends them off for analysis, then goes through results and makes a fertiliser plan. They do NOT take the samples.
+- Fertiliser blends: never list blend names or analyses (competitors). Explain they're formulated from soil analysis for the right N, P, K and S per acre and value for money. Range boxes are titles only: Grassland, Tillage, Lime & trace elements.
+- Agronomy team: Michael O'Sullivan (founder, agronomist), Brian O'Sullivan and Cathal Doran (qualified pesticide advisors and distributors). Advice page mentions VetPal under wormers.
+- Agri Choice logo: src/assets/agri-choice-logo.png (from the Agri Choice Facebook page). Always on a white tile. Don't use the old wheat-field banner as the logo.
+- Home page: no "harvest hours vary" line under opening hours.
