@@ -36,7 +36,7 @@ Yellow `.todo` boxes mark facts not yet confirmed by Brian. Never invent busines
 - Grain intake at harvest: barley, wheat, oats, beans.
 - Local customer base: write for local farmers, plain language.
 - Founded 1985 by Michael O'Sullivan (Brian's father) in Camolin; family business.
-- Second branch: Asdee, Co. Kerry, V31 Y472, phone 068 41974. Hours Mon–Fri 9am–5.30pm, lunch 1–2pm; Sat 9am–1pm; Sunday & bank holidays closed (assumed same as Camolin — confirm).
+- Second branch: Asdee, Co. Kerry, V31 Y472, phone 068 41974. Hours Mon–Fri 9am–5.30pm, lunch 1–2pm; Sat 9am–1pm; Sunday & bank holidays closed (confirmed).
 - Very extensive veterinary range; licensed merchant; linked in with VetPal for in-store vet prescriptions.
 - The bulk bags photo (bulk-bags-lime.jpg) is HYDRATED LIME, not fertiliser — it belongs with animal health / hygiene.
 - Sells AdBlue.
