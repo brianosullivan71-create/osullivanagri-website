@@ -13,6 +13,7 @@ PHONE = "053 938 3304"
 TEL = "tel:+353539383304"
 EMAIL = "osagriacc@gmail.com"
 FB = "https://www.facebook.com/osullivan.agri.9/"
+KERRY = 'Asdee, Co. Kerry <span class="todo">[check spelling of the Kerry branch town]</span>'
 MAPS = "https://www.google.com/maps/search/?api=1&query=O%27Sullivan%20Agricultural%20Services%20Y21%20T189"
 
 def ico(paths):
@@ -54,6 +55,7 @@ NAV = [
  ("advice.html", "Advice"),
  ("fertiliser.html", "Fertiliser"),
  ("crop-protection.html", "Crop protection"),
+ ("agri-choice.html", "Agri Choice"),
  ("seed.html", "Seed"),
  ("feed.html", "Feed"),
  ("animal-health.html", "Animal health"),
@@ -81,7 +83,7 @@ def header(current):
 </header>'''
 
 def footer():
-    prod = "".join(f'<li><a href="{h}">{t}</a></li>' for h, t in NAV[1:9])
+    prod = "".join(f'<li><a href="{h}">{t}</a></li>' for h, t in NAV[1:10])
     return f'''<footer class="site-foot">
   <div class="wrap">
     <div class="foot-grid">
@@ -93,6 +95,7 @@ def footer():
       <div><h4>Opening hours</h4><div class="stack" style="gap:6px">{HOURS_ROWS}</div></div>
       <div><h4>Contact</h4><ul><li><a href="{TEL}">{PHONE}</a></li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li><li><a href="{FB}" target="_blank" rel="noopener">Facebook</a></li></ul></div>
     </div>
+    <p style="margin-top:28px">Also at our Kerry branch: {KERRY}</p>
     <div class="foot-base"><span>© 2026 O'Sullivan Agricultural Services Ltd</span><span>DAFM-registered pesticide store · Licensed merchant for animal remedies</span></div>
   </div>
 </footer>
@@ -127,7 +130,7 @@ TILES = [
  ("crop-protection.html", "spray", "Crop protection", "Herbicides, fungicides and insecticides from a DAFM-registered store."),
  ("seed.html", "seed", "Seed", "Cereals, beans, rape and grass seed from Germinal and DLF."),
  ("feed.html", "feed", "Feed & minerals", "Our own rations milled here, straights and Agri Choice minerals."),
- ("animal-health.html", "health", "Animal health", "Wormers and animal remedies from a licensed merchant."),
+ ("animal-health.html", "health", "Animal health", "A full veterinary range, with prescriptions sorted in store through VetPal."),
  ("hardware.html", "hardware", "Agri hardware", "The yard and farm essentials you'd otherwise drive for."),
  ("grain.html", "grain", "Grain intake", "We take in barley, wheat, oats and beans at harvest."),
 ]
@@ -144,7 +147,7 @@ PAGES["index.html"] = ("O'Sullivan Agri | Farm supplies & advice, Camolin", f'''
 <section class="hero">{tramlines()}
   <div class="wrap">
     <div>
-      <p class="eyebrow">Camolin, Co. Wexford · Family run for 40 years</p>
+      <p class="eyebrow">Camolin, Co. Wexford · Family run since 1985</p>
       <h1>Everything for the farm, <em>and the advice to go with it</em></h1>
       <p class="lede">Fertiliser, sprays, seed, our own feed rations, minerals, animal remedies and hardware, all in one yard. Our qualified agronomists will walk your crops and help you get the most from what you buy.</p>
       <div class="actions"><a class="btn btn-straw" href="{TEL}">{I["phone"]} Call {PHONE}</a><a class="btn btn-line" href="#range">See everything we do</a></div>
@@ -176,6 +179,16 @@ PAGES["index.html"] = ("O'Sullivan Agri | Farm supplies & advice, Camolin", f'''
   </div>
 </div></section>
 
+<section class="band"><div class="wrap split" style="align-items:center">
+  <div class="stack"><p class="eyebrow">Our story</p><h2>A family business since 1985</h2>
+  <p style="font-size:1.12rem">Michael O'Sullivan started the business in Camolin in 1985. Forty years on, it's still run by the family, serving farmers around Camolin and further afield.</p>
+  <p class="muted">We've grown a lot since then. Alongside fertiliser and feed we now have our own feed mill, qualified agronomists, a full veterinary range, a shop full of hardware, and a second branch in {KERRY}.</p></div>
+  <div class="grid-2">
+    <div class="card"><p class="pct">1985</p><h4>Founded</h4><p class="muted">By Michael O'Sullivan, in Camolin.</p></div>
+    <div class="card"><p class="pct">2</p><h4>Branches</h4><p class="muted">Camolin, Co. Wexford, and {KERRY}.</p></div>
+  </div>
+</div></section>
+
 <section class="band band-green"><div class="wrap split">
   <div class="stack"><p class="eyebrow">Advice first</p><h2>Talk to an agronomist before you spend</h2>
   <p class="muted" style="font-size:1.14rem">We're qualified agronomists, not just a counter. Tell us what's happening in the field or the shed and we'll come out, look at it and give you a written recommendation.</p>
@@ -201,11 +214,11 @@ PAGES["index.html"] = ("O'Sullivan Agri | Farm supplies & advice, Camolin", f'''
 
 <section class="band band-straw"><div class="wrap split" style="align-items:center">
   <div class="stack"><p class="eyebrow">Our group's own brand</p><span class="brand-mark">{I["check"]}Agri Choice</span>
-  <p style="font-size:1.14rem">Agri Choice is the own brand of our buying group <span class="todo">[group name]</span>. It gives you good quality at a keener price across a lot of the agri range.</p></div>
+  <p style="font-size:1.14rem">Agri Choice is the own brand of our buying group <span class="todo">[group name]</span>. High quality products, bought together at the best prices.</p></div>
   <div class="card stack" style="background:var(--surface)">{photo("agri-choice-banner", "Agri Choice logo over a field of ripe barley")}<h4>Agri Choice in our yard</h4>
   <ul style="margin:10px 0 0;padding-left:1.2em;line-height:1.9">
-  <li>Calf/Beef GP, Sheep, Dry Cow and Maize Beet minerals</li><li>Mineral and vitamin supplements in bags and buckets</li><li>Cubicle lime: Hydrated Blend, Super P and standard</li>
-  <li><span class="todo">[other Agri Choice lines?]</span></li></ul></div>
+  <li>Mineral bags and mineral buckets</li><li>Cubicle lime: Hydrated Blend, Super P and standard</li><li>Silage wrap</li></ul>
+  <div><a class="btn btn-green" href="agri-choice.html">See the Agri Choice range</a></div></div>
 </div></section>
 
 <section class="band"><div class="wrap split">
@@ -259,8 +272,7 @@ PAGES["fertiliser.html"] = ("Fertiliser | O'Sullivan Agri", page_hero("Fertilise
   <div class="stack"><p class="eyebrow">Our own blends</p><h2>Made for your fields</h2>
   <p class="muted" style="font-size:1.1rem">Many of the blends we sell are our own. Bring in your soil results and we'll recommend the blend and rate for each field, for grazing, silage or tillage crops.</p>
   <div><a class="btn btn-green" href="advice.html">Get a fertiliser plan</a></div></div>
-  <div class="stack">{photo("bulk-bags-lime", "Bulk bags of fertiliser and lime in the store", "Bulk bags in the store")}
-  <div class="card"><h3>Our blends</h3><p class="muted" style="margin-top:8px"><span class="todo">[list your main blends, e.g. name + N-P-K + what it's for]</span></p></div></div>
+  <div class="card"><h3>Our blends</h3><p class="muted" style="margin-top:8px"><span class="todo">[list your main blends, e.g. name + N-P-K + what it's for]</span></p></div>
 </div></section>
 <section class="band band-white"><div class="wrap">
   <div class="head"><p class="eyebrow">The range</p><h2>What we stock</h2></div>
@@ -362,17 +374,75 @@ PAGES["feed.html"] = ("Feed & Minerals | O'Sullivan Agri", page_hero("Feed & min
 ''' + cta_band("Want a ration worked out for your stock? Ring us with your silage figures."))
 
 PAGES["animal-health.html"] = ("Animal Health | O'Sullivan Agri", page_hero("Animal health",
-  "Wormers and animal remedies",
-  "We're a licensed merchant for animal remedies. We'll help you pick the right product for your stock and the time of year.") + f'''
-<section class="band"><div class="wrap split">
-  <div class="stack"><p class="eyebrow">What we stock</p><h2>For cattle and sheep</h2>
-  {checks(["Wormers for cattle and sheep",
-           "<span class=todo>[fluke doses, pour-ons, vaccines, footbaths, other lines?]</span>"], "on-light")}</div>
-  <div class="stack">{photo("shop-animal-health", "Animal health shelves in the shop", "Animal health in the shop")}
-  <div class="card stack"><h3>Choosing the right wormer</h3>
-  <p class="muted">Using the right active ingredient, at the right time and the right dose for the animal's weight, is what keeps wormers working. Ask us and we'll talk it through.</p></div></div>
+  "A full veterinary range, and prescriptions sorted in store",
+  "We carry a very extensive range of veterinary products for cattle and sheep. We're a licensed merchant, and through VetPal we can get your prescription from a vet while you're at the counter.") + f'''
+<section class="band band-green"><div class="wrap split">
+  <div class="stack"><p class="eyebrow">Prescriptions through VetPal</p><h2>Need a prescription? Sort it here</h2>
+  <p class="muted" style="font-size:1.12rem">Wormers and other antiparasitic medicines now need a vet's prescription. We're linked in with VetPal, so you don't have to arrange a vet visit or deal with an app. We look after it for you in the store.</p>
+  <p class="muted"><span class="todo">[VetPal fee per product, if you want it shown]</span></p></div>
+  <ol class="steps" style="grid-template-columns:1fr">
+    <li style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14)"><h4>Tell us what you need</h4><p class="muted">Your stock, numbers, weights and what they've had before.</p></li>
+    <li style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14)"><h4>A vet reviews it through VetPal</h4><p class="muted">We send the details to a vet, who issues an electronic prescription.</p></li>
+    <li style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14)"><h4>Leave with your product</h4><p class="muted">We dispense it there and then, with advice on dosing.</p></li>
+  </ol>
 </div></section>
-''' + cta_band("Not sure which dose to use? Ask us before you buy."))
+
+<section class="band"><div class="wrap">
+  <div class="head"><p class="eyebrow">Our veterinary range</p><h2>Everything for herd and flock health</h2>
+  <p class="muted">A very extensive range, in stock in Camolin. <span class="todo">[confirm these groups and add any main brands]</span></p></div>
+  <div class="grid-3">
+    <div class="card stack"><h3>Parasite control</h3><p class="muted">Wormers, fluke doses and pour-ons for cattle and sheep.</p></div>
+    <div class="card stack"><h3>Vaccines</h3><p class="muted">Vaccines for cattle and sheep.</p></div>
+    <div class="card stack"><h3>Calf care</h3><p class="muted">Scour treatments, electrolytes and calf health products.</p></div>
+    <div class="card stack"><h3>Dairy & hoof care</h3><p class="muted">Mastitis tubes, teat dips, footbath products and hoof care.</p></div>
+    <div class="card stack"><h3>Minerals & supplements</h3><p class="muted">Agri Choice minerals in bags and buckets, boluses and drenches.</p></div>
+    <div class="card stack"><h3>Hygiene & bedding</h3><p class="muted">Hydrated lime, Agri Choice cubicle lime and disinfectants.</p></div>
+  </div>
+</div></section>
+
+<section class="band band-white"><div class="wrap">
+  <div class="gallery gallery-3">
+    {photo("shop-animal-health", "Animal health shelves in the shop", "Animal health in the shop")}
+    {photo("bulk-bags-lime", "Bulk bags of hydrated lime in the store", "Hydrated lime")}
+    {photo("agri-choice-cubicle-lime", "Agri Choice cubicle lime product sheet", "Agri Choice cubicle lime")}
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap split">
+  <div class="stack"><p class="eyebrow">Advice</p><h2>Choosing the right product</h2>
+  <p class="muted" style="font-size:1.1rem">Using the right active ingredient, at the right time and the right dose for the animal's weight, is what keeps wormers working. Ask us and we'll talk it through.</p></div>
+  <div class="card stack"><h3>Licensed merchant</h3><p class="muted">We're a licensed merchant for animal remedies, so you get proper advice with what you buy.</p></div>
+</div></section>
+''' + cta_band("Need a wormer or a prescription? Call in or ring us first."))
+
+PAGES["agri-choice.html"] = ("Agri Choice | O'Sullivan Agri", page_hero("Agri Choice",
+  "Agri Choice: high quality, at the best price",
+  "Agri Choice is our buying group's own brand. Because the group buys together, you get high quality products at the best prices.") + f'''
+<section class="band band-straw"><div class="wrap split" style="align-items:center">
+  <div class="stack"><span class="brand-mark">Agri Choice</span>
+  <p style="font-size:1.14rem">Quality you can rely on, bought together through our buying group <span class="todo">[group name]</span> and passed on at the keenest price we can.</p>
+  <div><a class="btn btn-green" href="{TEL}">{I["phone"]} Ask about Agri Choice</a></div></div>
+  {photo("agri-choice-banner", "Agri Choice logo over a field of ripe barley")}
+</div></section>
+
+<section class="band"><div class="wrap">
+  <div class="head"><p class="eyebrow">The range</p><h2>Agri Choice in our yard</h2></div>
+  <div class="grid-3">
+    <div class="card stack"><h3>Mineral bags</h3><p class="muted">Calf/Beef GP, Sheep, Dry Cow and Maize Beet minerals, in 25 kg bags.</p></div>
+    <div class="card stack"><h3>Mineral buckets</h3><p class="muted">Mineral and vitamin buckets for stock at grass or indoors.</p></div>
+    <div class="card stack"><h3>Cubicle lime</h3><p class="muted">Hydrated Blend, Super P and standard cubicle lime for cleaner, drier beds.</p></div>
+    <div class="card stack"><h3>Silage wrap</h3><p class="muted">Agri Choice silage wrap for baled silage.</p></div>
+    <div class="card stack"><h3>More in the range</h3><p class="muted"><span class="todo">[any other Agri Choice lines?]</span></p></div>
+  </div>
+</div></section>
+
+<section class="band band-white"><div class="wrap">
+  <div class="gallery gallery-3">
+    {photo("agri-choice-minerals", "Agri Choice mineral and vitamin supplements, bag and bucket range", "Minerals: bag and bucket range", True)}
+    {photo("agri-choice-cubicle-lime", "Agri Choice cubicle lime product sheet", "Cubicle lime range")}
+  </div>
+</div></section>
+''' + cta_band("Ask for Agri Choice at the counter, or ring us for a price."))
 
 PAGES["hardware.html"] = ("Agri Hardware | O'Sullivan Agri", page_hero("Agri hardware",
   "The farm hardware you'd otherwise drive for",
@@ -390,6 +460,7 @@ PAGES["hardware.html"] = ("Agri Hardware | O'Sullivan Agri", page_hero("Agri har
     {photo("hardware-wall", "Tools, lubricants and hardware on a display wall", "Tools and workshop", True)}
     {photo("shop-shelving", "Shelving of hardware with brushes", "Brushes and yard tools", True)}
     {photo("electric-sprayer", "Seaflo 16 litre electric knapsack sprayer", "Knapsack sprayers", True)}
+    {photo("adblue", "AdBlue dispensing tank with pump and nozzle", "AdBlue", True)}
   </div>
 </div></section>
 ''' + cta_band("Looking for something in particular? Ring us and we'll check."))
@@ -413,6 +484,10 @@ PAGES["contact.html"] = ("Contact | O'Sullivan Agri", page_hero("Contact",
   <div class="card stack"><h3>Phone</h3><p style="font-size:1.4rem;font-weight:700"><a href="{TEL}">{PHONE}</a></p></div>
   <div class="card stack"><h3>Email</h3><p style="font-size:1.1rem;font-weight:700;word-break:break-all"><a href="mailto:{EMAIL}">{EMAIL}</a></p></div>
   <div class="card stack"><h3>Address</h3><p>Baylands, Camolin,<br>Enniscorthy, Co. Wexford<br><b>Y21 T189</b></p><a href="{MAPS}" target="_blank" rel="noopener">Get directions →</a></div>
+</div></section>
+<section class="band band-white"><div class="wrap split">
+  <div class="stack"><p class="eyebrow">Our Kerry branch</p><h2>{KERRY}</h2></div>
+  <div class="card"><p class="muted"><span class="todo">[Kerry branch address, Eircode, phone and opening hours]</span></p></div>
 </div></section>
 <section class="band band-white"><div class="wrap split">
   <div class="stack"><p class="eyebrow">Opening hours</p><h2>When we're open</h2>

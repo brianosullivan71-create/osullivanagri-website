@@ -35,3 +35,11 @@ Yellow `.todo` boxes mark facts not yet confirmed by Brian. Never invent busines
 - Agri Choice is their buying group's own brand — highlight it (group name still to confirm).
 - Grain intake at harvest: barley, wheat, oats, beans.
 - Local customer base: write for local farmers, plain language.
+- Founded 1985 by Michael O'Sullivan (Brian's father) in Camolin; family business.
+- Second branch in Co. Kerry — Brian said "Ashtead"; site shows "Asdee" pending his confirmation.
+- Very extensive veterinary range; licensed merchant; linked in with VetPal for in-store vet prescriptions.
+- The bulk bags photo (bulk-bags-lime.jpg) is HYDRATED LIME, not fertiliser — it belongs with animal health / hygiene.
+- Sells AdBlue.
+- Agri Choice range: mineral bags, mineral buckets, cubicle lime, silage wrap (more to confirm). Message: high quality products at the best prices. Has its own page (agri-choice.html).
+- Photos come from the O' Sullivan Agri Facebook business page (facebook.com/profile.php?id=100088371622847),
+  cleaned with tools/clean_photos.py (glare, colour cast, shadows, sharpen, 1600px).
