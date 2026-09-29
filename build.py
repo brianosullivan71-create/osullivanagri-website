@@ -29,6 +29,7 @@ I = {
  "hardware": ico('<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/>'),
  "advice": ico('<circle cx="11" cy="11" r="6.5"/><path d="m20.5 20.5-4.8-4.8"/><path d="M11 8v6M8 11h6"/>'),
  "grain": ico('<path d="M4 20h16"/><path d="M6 20V9l6-5 6 5v11"/><path d="M9 20v-6h6v6"/><path d="M12 4v3"/>'),
+ "garden": ico('<path d="M12 21v-7"/><path d="M12 14c-3 0-5-2-5-5 3 0 5 2 5 5z"/><path d="M12 12c0-3.5 2.5-6 6-6 0 3.5-2.5 6-6 6z"/><path d="M5 21h14"/>'),
  "phone": ico('<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/>'),
  "pin": ico('<path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/>'),
  "check": ico('<path d="M20 6 9 17l-5-5"/>'),
@@ -60,6 +61,7 @@ NAV = [
  ("feed.html", "Feed"),
  ("animal-health.html", "Animal health"),
  ("hardware.html", "Hardware"),
+ ("garden.html", "Garden"),
  ("grain.html", "Grain intake"),
  ("contact.html", "Contact"),
 ]
@@ -83,7 +85,7 @@ def header(current):
 </header>'''
 
 def footer():
-    prod = "".join(f'<li><a href="{h}">{t}</a></li>' for h, t in NAV[1:10])
+    prod = "".join(f'<li><a href="{h}">{t}</a></li>' for h, t in NAV[1:11])
     return f'''<footer class="site-foot">
   <div class="wrap">
     <div class="foot-grid">
@@ -131,8 +133,10 @@ TILES = [
  ("seed.html", "seed", "Seed", "Cereals, beans, rape, forage crops and grass seed."),
  ("feed.html", "feed", "Feed & minerals", "Straights ground in our own mill, house ration recipes and Agri Choice minerals."),
  ("animal-health.html", "health", "Animal health", "A full veterinary range, with prescriptions sorted in store through VetPal."),
- ("hardware.html", "hardware", "Agri hardware", "The yard and farm essentials you'd otherwise drive for."),
- ("grain.html", "grain", "Grain intake", "We take in barley, wheat, oats and beans at harvest."),
+ ("hardware.html", "hardware", "Agri hardware", "Fencing, Gibney gates, water fittings, workwear and yard essentials."),
+ ("garden.html", "garden", "Garden", "Knapsack sprayers, lawn feed, weed killers, path spray and hoses."),
+ ("agri-choice.html", "fert", "Agri Choice", "Our group's own brand: high quality at the best prices."),
+ ("grain.html", "grain", "Grain intake", "We take in barley, wheat, oats, beans and oilseed rape at harvest."),
 ]
 
 def tiles():
@@ -445,35 +449,70 @@ PAGES["agri-choice.html"] = ("Agri Choice | O'Sullivan Agri", page_hero("Agri Ch
 ''' + cta_band("Ask for Agri Choice at the counter, or ring us for a price."))
 
 PAGES["hardware.html"] = ("Agri Hardware | O'Sullivan Agri", page_hero("Agri hardware",
-  "The farm hardware you'd otherwise drive for",
-  "Yard and farm essentials, all here in Camolin.") + f'''
+  "Fencing, gates and farm hardware",
+  "A very extensive range of agri fencing, Gibney gates and feeders, water fittings, workwear and yard essentials, all here in Camolin.") + f'''
 <section class="band"><div class="wrap">
-  <div class="head"><p class="eyebrow">The range</p><h2>What's in the shop</h2>
-  <p class="muted">A look at what's in the shed and on the shelves. <span class="todo">[we'll add brands and detail for each group together]</span></p></div>
+  <div class="head"><p class="eyebrow">Fencing</p><h2>A very extensive range of agri fencing</h2>
+  <p class="muted" style="font-size:1.1rem">Everything to fence a farm: the full Clipex range, timber posts and stakes, sheep wire, and electric fencing from our large Cheetah, PEL and Gallagher stands.</p></div>
+  <div class="grid-3" style="margin-bottom:18px">
+    <div class="card stack"><h3>Clipex</h3><p class="muted">We stock the full range of Clipex fencing.</p></div>
+    <div class="card stack"><h3>Timber posts & wire</h3><p class="muted">Round fencing stakes, posts and sheep wire, in stock in the yard.</p></div>
+    <div class="card stack"><h3>Electric fencing</h3><p class="muted">Large Cheetah, PEL and Gallagher stands: energisers, reels, tape, polywire and posts.</p></div>
+  </div>
   <div class="gallery gallery-3">
-    {photo("galvanised-gates", "Galvanised gates stacked in the shed", "Galvanised gates")}
-    {photo("fencing-stakes", "Pallets of round fencing stakes", "Fencing stakes")}
+    {photo("fencing-stakes", "Pallets of round fencing stakes", "Timber fencing stakes")}
     {photo("sheep-wire", "Rolls of sheep wire on pallets", "Sheep wire", True)}
-    {photo("troughs-and-posts", "Water troughs and electric fence posts", "Water troughs and electric fencing")}
+    {photo("troughs-and-posts", "Water troughs and electric fence posts", "Electric fencing posts and troughs")}
+  </div>
+</div></section>
+
+<section class="band band-white"><div class="wrap split" style="align-items:center">
+  <div class="stack"><p class="eyebrow">Gibney</p><h2>Gates, feeders and troughs</h2>
+  <p class="muted" style="font-size:1.1rem">We stock Gibney galvanised gates, along with Gibney drinking troughs, round feeders and hanging posts.</p>
+  {checks(["Galvanised gates", "Drinking troughs", "Round feeders", "Hanging posts"], "on-light")}</div>
+  {photo("galvanised-gates", "Gibney galvanised gates stacked in the shed", "Gibney galvanised gates")}
+</div></section>
+
+<section class="band"><div class="wrap split" style="align-items:center">
+  <div class="stack"><p class="eyebrow">Water fittings</p><h2>Philmac and Agriflow</h2>
+  <p class="muted" style="font-size:1.1rem">A very broad range of Philmac and Agriflow water fittings for troughs, yards and field supplies.</p></div>
+  <div class="card stack"><h3>Water fittings</h3><p class="muted">Fittings, connectors and valves to get water where your stock need it.</p></div>
+</div></section>
+
+<section class="band band-white"><div class="wrap split" style="align-items:center">
+  <div class="stack"><p class="eyebrow">Workwear & footwear</p><h2>Cottonmount and Portwest</h2>
+  <p class="muted" style="font-size:1.1rem">Work clothing from Cottonmount and Portwest, with boots and footwear for the yard and the field.</p></div>
+  {photo("footwear", "Boots and footwear on display", "Footwear")}
+</div></section>
+
+<section class="band"><div class="wrap">
+  <div class="head"><p class="eyebrow">In the shop</p><h2>Tools, fixings and yard essentials</h2></div>
+  <div class="gallery">
     {photo("fixings-bins", "Wall of bins with nuts, bolts and fixings", "Nuts, bolts and fixings")}
-    {photo("footwear", "Boots and footwear on display", "Footwear", True)}
     {photo("hardware-wall", "Tools, lubricants and hardware on a display wall", "Tools and workshop", True)}
     {photo("shop-shelving", "Shelving of hardware with brushes", "Brushes and yard tools", True)}
-    {photo("electric-sprayer", "Seaflo 16 litre electric knapsack sprayer", "Knapsack sprayers", True)}
     {photo("adblue", "AdBlue dispensing tank with pump and nozzle", "AdBlue", True)}
   </div>
 </div></section>
 ''' + cta_band("Looking for something in particular? Ring us and we'll check."))
 
+PAGES["garden.html"] = ("Garden | O'Sullivan Agri", page_hero("Garden",
+  "For the garden, lawn and paths",
+  "Sprayers, lawn feed, weed killers and hoses, from the same people who look after your fields.") + f'''
+<section class="band"><div class="wrap split" style="align-items:center">
+  <div class="stack"><p class="eyebrow">Garden range</p><h2>What we stock</h2>
+  {checks(["Knapsack sprayers", "Weed killer for lawns", "Lawn fertiliser", "Path and patio spray", "Water hoses"], "on-light")}</div>
+  {photo("electric-sprayer", "Seaflo 16 litre electric knapsack sprayer", "Knapsack sprayers", True)}
+</div></section>
+''' + cta_band("Not sure what your lawn or garden needs? Ask us at the counter."))
+
 PAGES["grain.html"] = ("Grain Intake | O'Sullivan Agri", page_hero("Grain intake",
   "We take in your grain at harvest",
-  "At harvest we take in barley, wheat, oats and beans from local growers.") + f'''
-<section class="band"><div class="wrap split">
-  <div class="stack"><p class="eyebrow">Crops we take in</p><h2>Barley, wheat, oats and beans</h2>
-  <div class="chips" style="color:var(--green-2)"><span>Barley</span><span>Wheat</span><span>Oats</span><span>Beans</span></div>
+  "At harvest we take in barley, wheat, oats, beans and oilseed rape from local growers.") + f'''
+<section class="band"><div class="wrap">
+  <div class="head" style="margin-bottom:0"><p class="eyebrow">Crops we take in</p><h2>Barley, wheat, oats, beans and oilseed rape</h2>
+  <div class="chips" style="color:var(--green-2)"><span>Barley</span><span>Wheat</span><span>Oats</span><span>Beans</span><span>Oilseed rape</span></div>
   <p class="muted" style="font-size:1.1rem">Harvest hours change with the weather, so ring ahead before you draw in and we'll plan the intake with you.</p></div>
-  <div class="card stack"><h3>Before you draw in</h3>
-  <p class="muted"><span class="todo">[moisture / drying terms, weighbridge, payment, booking?]</span></p></div>
 </div></section>
 ''' + cta_band("Harvesting soon? Ring us to book your intake."))
 

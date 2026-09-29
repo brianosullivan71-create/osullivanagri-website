@@ -53,3 +53,7 @@ Yellow `.todo` boxes mark facts not yet confirmed by Brian. Never invent busines
 - Home page: no "harvest hours vary" line under opening hours.
 - Feed page minerals: Turbo Power Beef removed (Brian). Rumbuff + Yeast stays but is NOT Agri Choice; heading is "Minerals, including Agri Choice".
 - Animal health: product groups approved as they are; do NOT show a VetPal fee.
+- Hardware brands (confirmed): Gibney galvanised gates, drinking troughs, round feeders, hanging posts; full Clipex fencing range; very extensive agri fencing incl. timber posts and sheep wire; large Cheetah, PEL and Gallagher electric fencing stands; Philmac and Agriflow water fittings; Cottonmount and Portwest workwear. Electric sprayer is NOT on hardware (moved to Garden).
+- Garden page (garden.html): knapsack sprayers, lawn weed killer, lawn fertiliser, path spray, water hoses. More photos to come from Brian.
+- Grain intake: barley, wheat, oats, beans, oilseed rape. No "before you draw in" box.
+- Don't copy product photos from other merchants' websites (e.g. Topline Murphys); use Brian's own or manufacturer-provided images.

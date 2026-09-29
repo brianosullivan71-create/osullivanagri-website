@@ -115,7 +115,7 @@ p{margin:0}
 .split > *{min-width:0}
 
 /* product tiles */
-.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.tiles{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
 .tile{display:flex;flex-direction:column;gap:10px;padding:24px 22px 22px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);text-decoration:none;color:var(--ink);transition:transform .15s ease,border-color .15s ease}
 .band-white .tile{background:var(--bg)}
 .tile:hover{transform:translateY(-3px);border-color:var(--green-2)}
@@ -206,3 +206,4 @@ table.list td.num{text-align:right;white-space:nowrap}
 .ac-logo{background:#ffffff;border-radius:var(--r);padding:18px 22px;max-width:460px}
 .ac-logo img{display:block;width:100%;height:auto}
 .ac-logo-lg{max-width:none;padding:32px 36px}
+.gallery .photo img{aspect-ratio:4/5}
