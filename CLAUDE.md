@@ -28,7 +28,7 @@ Yellow `.todo` boxes mark facts not yet confirmed by Brian. Never invent busines
 ## Facts confirmed by Brian (Sept 2026)
 
 - Phone 053 938 3304 · Email osagriacc@gmail.com · Facebook facebook.com/osullivan.agri.9
-- Hours: Mon–Fri 9am–6pm, Sat 9am–1pm, closed Sundays and bank holidays. Harvest hours vary (don't list them).
+- Camolin hours: Mon–Fri 9am–6pm, closed for lunch 1–2pm; Sat 9am–1pm; closed Sundays and bank holidays. Harvest hours vary (don't list them).
 - Fertiliser: broad range incl. many own custom blends. Do NOT mention delivery.
 - Seed: cereals (wheat, barley, oats), beans, rape, forage crops, grass seed. Do NOT name seed companies (no Germinal/DLF) or varieties; forage crops listed as a title only; grass seed = "some of the best mixes".
 - Feed: own mill; house rations (see feed page); straights barley, beans, oats, maize, soya bean meal, soya hulls.
@@ -36,7 +36,7 @@ Yellow `.todo` boxes mark facts not yet confirmed by Brian. Never invent busines
 - Grain intake at harvest: barley, wheat, oats, beans.
 - Local customer base: write for local farmers, plain language.
 - Founded 1985 by Michael O'Sullivan (Brian's father) in Camolin; family business.
-- Second branch: Asdee, Co. Kerry (confirmed).
+- Second branch: Asdee, Co. Kerry, V31 Y472, phone 068 41974. Hours Mon–Fri 9am–5.30pm, lunch 1–2pm; Sat 9am–1pm; Sunday & bank holidays closed (assumed same as Camolin — confirm).
 - Very extensive veterinary range; licensed merchant; linked in with VetPal for in-store vet prescriptions.
 - The bulk bags photo (bulk-bags-lime.jpg) is HYDRATED LIME, not fertiliser — it belongs with animal health / hygiene.
 - Sells AdBlue.
@@ -57,3 +57,4 @@ Yellow `.todo` boxes mark facts not yet confirmed by Brian. Never invent busines
 - Garden page (garden.html): knapsack sprayers, lawn weed killer, lawn fertiliser, path spray, water hoses. More photos to come from Brian.
 - Grain intake: barley, wheat, oats, beans, oilseed rape. No "before you draw in" box.
 - Don't copy product photos from other merchants' websites (e.g. Topline Murphys); use Brian's own or manufacturer-provided images.
+- Clipex: official logo and photos from clipex.ie (Brian asked for Clipex images from online). Logo at src/assets/clipex-logo.png on a white tile.

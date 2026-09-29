@@ -67,8 +67,11 @@ NAV = [
 ]
 
 HOURS_ROWS = ('<div class="open-row"><span>Mon – Fri</span><b>9.00am – 6.00pm</b></div>'
+              '<div class="open-row"><span>Lunch, Mon – Fri</span><b>Closed 1.00 – 2.00pm</b></div>'
               '<div class="open-row"><span>Saturday</span><b>9.00am – 1.00pm</b></div>'
               '<div class="open-row"><span>Sun &amp; bank holidays</span><b>Closed</b></div>')
+KERRY_TEL = "tel:+3536841974"
+KERRY_PHONE = "068 41974"
 
 def header(current):
     cur = ' aria-current="page"'
@@ -97,7 +100,7 @@ def footer():
       <div><h4>Opening hours</h4><div class="stack" style="gap:6px">{HOURS_ROWS}</div></div>
       <div><h4>Contact</h4><ul><li><a href="{TEL}">{PHONE}</a></li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li><li><a href="{FB}" target="_blank" rel="noopener">Facebook</a></li></ul></div>
     </div>
-    <p style="margin-top:28px">Also at our Kerry branch: {KERRY}</p>
+    <p style="margin-top:28px">Also at our Kerry branch: {KERRY}, V31 Y472 · <a href="{KERRY_TEL}">{KERRY_PHONE}</a></p>
     <div class="foot-base"><span>© 2026 O'Sullivan Agricultural Services Ltd</span><span>DAFM-registered pesticide store · Licensed merchant for animal remedies</span></div>
   </div>
 </footer>
@@ -455,7 +458,7 @@ PAGES["hardware.html"] = ("Agri Hardware | O'Sullivan Agri", page_hero("Agri har
   <div class="head"><p class="eyebrow">Fencing</p><h2>A very extensive range of agri fencing</h2>
   <p class="muted" style="font-size:1.1rem">Everything to fence a farm: the full Clipex range, timber posts and stakes, sheep wire, and electric fencing from our large Cheetah, PEL and Gallagher stands.</p></div>
   <div class="grid-3" style="margin-bottom:18px">
-    <div class="card stack"><h3>Clipex</h3><p class="muted">We stock the full range of Clipex fencing.</p></div>
+    <div class="card stack"><div class="ac-logo" style="max-width:220px;padding:10px 14px"><img src="assets/clipex-logo.png" alt="Clipex"></div><p class="muted">We stock the full range of Clipex fencing and posts.</p></div>
     <div class="card stack"><h3>Timber posts & wire</h3><p class="muted">Round fencing stakes, posts and sheep wire, in stock in the yard.</p></div>
     <div class="card stack"><h3>Electric fencing</h3><p class="muted">Large Cheetah, PEL and Gallagher stands: energisers, reels, tape, polywire and posts.</p></div>
   </div>
@@ -526,7 +529,16 @@ PAGES["contact.html"] = ("Contact | O'Sullivan Agri", page_hero("Contact",
 </div></section>
 <section class="band band-white"><div class="wrap split">
   <div class="stack"><p class="eyebrow">Our Kerry branch</p><h2>{KERRY}</h2></div>
-  <div class="card"><p class="muted"><span class="todo">[Kerry branch address, Eircode, phone and opening hours]</span></p></div>
+  <div class="card stack">
+    <dl class="facts" style="margin-top:0"><dt>Phone</dt><dd><a href="{KERRY_TEL}"><b>{KERRY_PHONE}</b></a></dd>
+    <dt>Eircode</dt><dd><b>V31 Y472</b> · <a href="https://www.google.com/maps/search/?api=1&amp;query=V31%20Y472" target="_blank" rel="noopener">Directions</a></dd></dl>
+    <table class="list hours-t"><tbody>
+      <tr><th scope="row">Monday – Friday</th><td>9.00am – 5.30pm</td></tr>
+      <tr><th scope="row">Lunch, Mon – Fri</th><td>Closed 1.00 – 2.00pm</td></tr>
+      <tr><th scope="row">Saturday</th><td>9.00am – 1.00pm</td></tr>
+      <tr><th scope="row">Sunday &amp; bank holidays</th><td>Closed</td></tr>
+    </tbody></table>
+  </div>
 </div></section>
 <section class="band band-white"><div class="wrap split">
   <div class="stack"><p class="eyebrow">Opening hours</p><h2>When we're open</h2>
@@ -534,6 +546,7 @@ PAGES["contact.html"] = ("Contact | O'Sullivan Agri", page_hero("Contact",
   {photo("shop-aisle-1", "Aisle in the O'Sullivan Agri shop")}</div>
   <div class="card"><table class="list hours-t"><tbody>
     <tr><th scope="row">Monday – Friday</th><td>9.00am – 6.00pm</td></tr>
+    <tr><th scope="row">Lunch, Mon – Fri</th><td>Closed 1.00 – 2.00pm</td></tr>
     <tr><th scope="row">Saturday</th><td>9.00am – 1.00pm</td></tr>
     <tr><th scope="row">Sunday</th><td>Closed</td></tr>
     <tr><th scope="row">Bank holidays</th><td>Closed</td></tr>
