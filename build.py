@@ -378,8 +378,7 @@ PAGES["animal-health.html"] = ("Animal Health | O'Sullivan Agri", page_hero("Ani
   "We carry a very extensive range of veterinary products for cattle and sheep. We're a licensed merchant, and through VetPal we can get your prescription from a vet while you're at the counter.") + f'''
 <section class="band band-green"><div class="wrap split">
   <div class="stack"><p class="eyebrow">Prescriptions through VetPal</p><h2>Need a prescription? Sort it here</h2>
-  <p class="muted" style="font-size:1.12rem">Wormers and other antiparasitic medicines now need a vet's prescription. We're linked in with VetPal, so you don't have to arrange a vet visit or deal with an app. We look after it for you in the store.</p>
-  <p class="muted"><span class="todo">[VetPal fee per product, if you want it shown]</span></p></div>
+  <p class="muted" style="font-size:1.12rem">Wormers and other antiparasitic medicines now need a vet's prescription. We're linked in with VetPal, so you don't have to arrange a vet visit or deal with an app. We look after it for you in the store.</p></div>
   <ol class="steps" style="grid-template-columns:1fr">
     <li style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14)"><h4>Tell us what you need</h4><p class="muted">Your stock, numbers, weights and what they've had before.</p></li>
     <li style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14)"><h4>A vet reviews it through VetPal</h4><p class="muted">We send the details to a vet, who issues an electronic prescription.</p></li>
@@ -389,7 +388,7 @@ PAGES["animal-health.html"] = ("Animal Health | O'Sullivan Agri", page_hero("Ani
 
 <section class="band"><div class="wrap">
   <div class="head"><p class="eyebrow">Our veterinary range</p><h2>Everything for herd and flock health</h2>
-  <p class="muted">A very extensive range, in stock in Camolin. <span class="todo">[confirm these groups and add any main brands]</span></p></div>
+  <p class="muted">A very extensive range, in stock in Camolin.</p></div>
   <div class="grid-3">
     <div class="card stack"><h3>Parasite control</h3><p class="muted">Wormers, fluke doses and pour-ons for cattle and sheep.</p></div>
     <div class="card stack"><h3>Vaccines</h3><p class="muted">Vaccines for cattle and sheep.</p></div>
