@@ -66,6 +66,6 @@ Yellow `.todo` boxes mark facts not yet confirmed by Brian. Never invent busines
 - SSL: at 29 Sept the Let's Encrypt cert on the server did not yet cover osullivanagri.com / www (issued while DNS was split). cPanel AutoSSL runs daily; if https still fails, run AutoSSL in cPanel > SSL/TLS Status > "Run AutoSSL" (Brian to click).
 - Yard photos (Brian, 6 Oct 2026, taken in the Camolin yard): stakes, galvanised gates/panels/feeder, blue water pipe coils, land drainage pipe/chambers, silage covers, Agri Choice wall sign, store sheds.
   Placed on hardware.html (fencing, gates, water pipe, new Land drainage and Silage covers sections) and index.html (Agri Choice sign under the Agri Choice band; "Our yard" sheds section).
-  Photos of pipes/covers/panels show other makers' labels: don't name brands for them. Brian mentioned "meal bins" photos but none were in the batch (still to come).
+  Photos of pipes/covers/panels show other makers' labels: don't name brands for them. Meal bins photo added later (hardware.html, "Meal bins" section).
   Processed with tools/clean_photos.py (glare 0) plus crops; new photos live in src/assets/photos/.
 
