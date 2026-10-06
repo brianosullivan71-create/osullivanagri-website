@@ -195,6 +195,16 @@ PAGES["index.html"] = ("O'Sullivan Agri | Farm supplies & advice, Camolin", f'''
   </div>
 </div></section>
 
+<section class="band band-white"><div class="wrap">
+  <div class="head"><p class="eyebrow">Our yard</p><h2>Plenty of room, and plenty in stock</h2>
+  <p class="muted">Covered stores and a big yard at Baylands, Camolin, so we can hold a wide range for you to collect.</p></div>
+  <div class="gallery gallery-3 gallery-stores">
+    {photo("stores-long", "Row of green stores with roller doors and the O'Sullivan Agri sign", "Our stores at Baylands, Camolin")}
+    {photo("stores-sign-angle", "O'Sullivan Agri sign above the store doors", "Look out for the O'Sullivan Agri sign")}
+    {photo("stores-row", "Stores 10 and 11 with the yard in front", "Room to turn and load in the yard")}
+  </div>
+</div></section>
+
 <section class="band band-green"><div class="wrap split">
   <div class="stack"><p class="eyebrow">Advice first</p><h2>Talk to an agronomist before you spend</h2>
   <p class="muted" style="font-size:1.14rem">We're qualified agronomists, not just a counter. Tell us what's happening in the field or the shed and we'll come out, look at it and give you a written recommendation.</p>
@@ -226,6 +236,9 @@ PAGES["index.html"] = ("O'Sullivan Agri | Farm supplies & advice, Camolin", f'''
   <ul style="margin:10px 0 0;padding-left:1.2em;line-height:1.9">
   <li>Mineral bags and mineral buckets</li><li>Cubicle lime: Hydrated Blend, Super P and standard</li><li>Silage wrap and silage covers</li></ul>
   <div><a class="btn btn-green" href="agri-choice.html">See the Agri Choice range</a></div></div>
+</div>
+<div class="wrap" style="margin-top:28px">
+  {photo("agri-choice-sign", "Agri Choice sign on the wall of our yard: Make Agri Choice your only choice", "On the wall at our yard in Camolin", False).replace('class="photo"', 'class="photo photo-banner"')}
 </div></section>
 
 <section class="band"><div class="wrap split">
@@ -462,9 +475,10 @@ PAGES["hardware.html"] = ("Agri Hardware | O'Sullivan Agri", page_hero("Agri har
     <div class="card stack"><h3>Timber posts & wire</h3><p class="muted">Round fencing stakes, posts and sheep wire, in stock in the yard.</p></div>
     <div class="card stack"><h3>Electric fencing</h3><p class="muted">Large Cheetah, PEL and Gallagher stands: energisers, reels, tape, polywire and posts.</p></div>
   </div>
-  <div class="gallery gallery-3">
+  <div class="gallery gallery-wide">
+    {photo("yard-stakes", "Stacks of black, brown and green treated timber fencing posts in the yard", "Treated timber posts and stakes in the yard")}
     {photo("fencing-stakes", "Pallets of round fencing stakes", "Timber fencing stakes")}
-    {photo("sheep-wire", "Rolls of sheep wire on pallets", "Sheep wire", True)}
+    {photo("sheep-wire", "Rolls of sheep wire on pallets", "Sheep wire")}
     {photo("troughs-and-posts", "Water troughs and electric fence posts", "Electric fencing posts and troughs")}
   </div>
 </div></section>
@@ -485,12 +499,37 @@ PAGES["hardware.html"] = ("Agri Hardware | O'Sullivan Agri", page_hero("Agri har
   <p class="muted" style="font-size:1.1rem">We stock Gibney galvanised gates, along with Gibney drinking troughs, round feeders and hanging posts.</p>
   {checks(["Galvanised gates", "Drinking troughs", "Round feeders", "Hanging posts"], "on-light")}</div>
   {photo("galvanised-gates", "Gibney galvanised gates stacked in the shed", "Gibney galvanised gates")}
+</div>
+<div class="wrap" style="margin-top:28px">
+  <div class="gallery gallery-3 gallery-wide">
+    {photo("gates-and-posts", "Galvanised farm gates and gate posts stacked against a wall", "Gates and gate posts")}
+    {photo("galvanised-panels", "Stacks of galvanised cattle panels in three lengths", "Galvanised panels in different lengths")}
+    {photo("hoop-feeder", "Galvanised arched feeder with a trough beside it", "Feeders and troughs")}
+  </div>
 </div></section>
 
 <section class="band band-white"><div class="wrap split" style="align-items:center">
   <div class="stack"><p class="eyebrow">Water fittings</p><h2>Philmac and Agriflow</h2>
-  <p class="muted" style="font-size:1.1rem">A very broad range of Philmac and Agriflow water fittings for troughs, yards and field supplies.</p></div>
-  <div class="card stack"><h3>Water fittings</h3><p class="muted">Fittings, connectors and valves to get water where your stock need it.</p></div>
+  <p class="muted" style="font-size:1.1rem">A very broad range of Philmac and Agriflow water fittings for troughs, yards and field supplies, with water pipe in coils to go with them.</p>
+  <p class="muted">Fittings, connectors and valves to get water where your stock need it.</p></div>
+  {photo("water-pipe-coils", "Coils of blue water pipe on pallets in the yard", "Water pipe in coils", False)}
+</div></section>
+
+<section class="band"><div class="wrap">
+  <div class="head"><p class="eyebrow">Land drainage</p><h2>Drainage pipe, fittings and chambers</h2>
+  <p class="muted" style="font-size:1.1rem">Coils of land drainage pipe, larger pipe in lengths, and the chambers and fittings to go with it, all in stock in the yard.</p></div>
+  <div class="gallery gallery-3 gallery-wide">
+    {photo("land-drainage-coils", "Coils of black and yellow land drainage pipe on pallets", "Land drainage pipe in coils")}
+    {photo("drainage-pipes-chambers", "Drainage pipe in lengths with chambers and fittings on pallets", "Pipe, chambers and fittings")}
+    {photo("large-drainage-pipes", "Large twin-wall drainage pipes stacked in frames", "Larger pipe in lengths")}
+  </div>
+</div></section>
+
+<section class="band band-white"><div class="wrap split" style="align-items:center">
+  <div class="stack"><p class="eyebrow">Silage</p><h2>Silage covers</h2>
+  <p class="muted" style="font-size:1.1rem">Silage covers in stock in the yard. Our Agri Choice range also has silage covers and silage wrap.</p>
+  <div><a class="btn btn-green" href="agri-choice.html">See the Agri Choice range</a></div></div>
+  {photo("silage-covers", "Rolls of silage covers on pallets", "Silage covers", False)}
 </div></section>
 
 <section class="band"><div class="wrap split" style="align-items:center">

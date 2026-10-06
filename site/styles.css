@@ -207,3 +207,7 @@ table.list td.num{text-align:right;white-space:nowrap}
 .ac-logo img{display:block;width:100%;height:auto}
 .ac-logo-lg{max-width:none;padding:32px 36px}
 .gallery .photo img{aspect-ratio:4/5}
+.gallery.gallery-wide .photo img{aspect-ratio:4/3}
+.photo-banner img{aspect-ratio:1600/792}
+.gallery.gallery-stores .photo img{aspect-ratio:3/2}
+@media (max-width:980px){.gallery-stores .photo:first-child{grid-column:1/-1}}
